@@ -1,0 +1,82 @@
+version: "3.0"
+
+stories:
+- story: greet path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: goodbye path
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: ask hours path
+  steps:
+  - intent: ask_hours
+  - action: utter_ask_hours
+
+- story: ask reset password path
+  steps:
+  - intent: ask_reset_password
+  - action: utter_ask_reset_password
+
+- story: ask location path
+  steps:
+  - intent: ask_location
+  - action: utter_ask_location
+
+- story: fallback path
+  steps:
+  - intent: fallback
+  - action: utter_fallback
+
+- story: greet with name
+  steps:
+  - intent: provide_name
+  - action: action_greet_user
+
+- story: ask docs path 1
+  steps:
+  - intent: ask_docs
+  - action: utter_ask_docs_1
+
+- story: ask docs path 2
+  steps:
+  - intent: ask_docs
+  - action: utter_ask_docs_2
+
+- story: ask docs path 3
+  steps:
+  - intent: ask_docs
+  - action: utter_ask_docs_3
+
+- story: ask docs path 4
+  steps:
+  - intent: ask_docs
+  - action: utter_ask_docs_4
+
+- story: ask docs path 5
+  steps:
+  - intent: ask_docs
+  - action: utter_ask_docs_5
+
+- story: ask form path 1
+  steps:
+  - intent: ask_form
+  - action: utter_ask_form_1
+
+- story: ask form path 2
+  steps:
+  - intent: ask_form
+  - action: utter_ask_form_2
+
+- story: ask form path 3
+  steps:
+  - intent: ask_form
+  - action: utter_ask_form_3
+
+- story: ask form path 4
+  steps:
+  - intent: ask_form
+  - action: utter_ask_form_4

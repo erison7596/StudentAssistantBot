@@ -1,0 +1,108 @@
+version: "3.1"
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_hours
+  - ask_reset_password
+  - ask_location
+  - fallback
+  - provide_name
+  - ask_docs
+  - ask_form
+
+slots:
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+
+responses:
+  utter_greet:
+    - text: "Olá! Como posso ajudar você hoje?"
+    - text: "Oi! Em que posso te ajudar?"
+    - text: "Olá! O que você precisa?"
+
+  utter_goodbye:
+    - text: "Tchau! Tenha um ótimo dia!"
+
+  utter_iamabot:
+    - text: "Eu sou um assistente virtual."
+
+  utter_happy:
+    - text: "Que bom ouvir isso!"
+
+  utter_cheer_up:
+    - text: "Não se preocupe, tudo vai ficar bem."
+
+  utter_did_that_help:
+    - text: "Isso ajudou você?"
+
+  utter_ask_hours:
+    - text: "Nosso horário de funcionamento é das 9h às 18h, de segunda a sexta-feira."
+
+  utter_ask_reset_password:
+    - text: "Você pode resetar sua senha clicando no link 'Esqueci minha senha' na página de login."
+
+  utter_ask_location:
+    - text: "Nossa sede fica na Avenida Central, 123, São Paulo."
+
+  utter_fallback:
+    - text: "Desculpe, não entendi sua pergunta. Pode reformular ou tentar novamente?"
+    - text: "Não entendi sua pergunta. Pode tentar reformular?"
+    - text: "Poderia repetir sua pergunta de outra forma? Não consegui entender."
+
+  utter_welcome:
+    - text: "Oi {name}, Eu sou o BotIF. Como posso ajudar você hoje?"
+
+  utter_ask_docs_1:
+    - text: "Para solicitar a segunda via do diploma, você precisa preencher o formulário no nosso site."
+    - text: "A segunda via do diploma pode ser solicitada preenchendo o formulário online disponível no site."
+
+  utter_ask_docs_2:
+    - text: "O prazo para emissão do histórico escolar é de 15 dias úteis."
+    - text: "Leva cerca de 15 dias úteis para emitir o histórico escolar."
+
+  utter_ask_docs_3:
+    - text: "Você pode consultar o andamento do seu pedido de documentação no portal do aluno."
+    - text: "Acompanhe o status do seu pedido de documentação pelo portal do aluno."
+
+  utter_ask_docs_4:
+    - text: "A autenticação de documentos pode ser feita no setor de atendimento ao estudante."
+    - text: "Para autenticar documentos, dirija-se ao setor de atendimento ao estudante."
+
+  utter_ask_docs_5:
+    - text: "Para obter uma declaração de matrícula, acesse o portal do aluno e solicite o documento."
+    - text: "Você pode solicitar a declaração de matrícula no portal do aluno."
+
+  utter_ask_form_1:
+    - text: "O formulário socioeconômico deve ser preenchido online no portal do estudante."
+    - text: "Preencha o formulário socioeconômico no portal do estudante."
+
+  utter_ask_form_2:
+    - text: "Você precisa anexar comprovante de renda ao formulário socioeconômico."
+    - text: "Anexe o comprovante de renda ao preencher o formulário socioeconômico."
+
+  utter_ask_form_3:
+    - text: "O prazo para envio do formulário socioeconômico é até o final do mês."
+    - text: "Envie o formulário socioeconômico até o final do mês."
+
+  utter_ask_form_4:
+    - text: "Se tiver dúvidas sobre o formulário, entre em contato com o setor de assistência estudantil."
+    - text: "Para dúvidas sobre o formulário, procure o setor de assistência estudantil."
+
+  utter_ask_form_5:
+    - text: "O formulário socioeconômico está disponível na seção de documentos do portal do aluno."
+    - text: "Você encontra o formulário socioeconômico na seção de documentos do portal do aluno."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_greet_user

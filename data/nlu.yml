@@ -1,0 +1,59 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Olá
+    - Oi
+    - Ei
+    - Bom dia
+    - Boa tarde
+    - Boa noite
+
+- intent: goodbye
+  examples: |
+    - Tchau
+    - Até logo
+    - Adeus
+    - Até mais
+    - Falou
+
+- intent: ask_hours
+  examples: |
+    - Qual é o horário de funcionamento?
+    - Quais são os horários de abertura?
+    - A que horas vocês abrem?
+    - Qual o horário de funcionamento?
+    - Quando vocês estão abertos?
+
+- intent: ask_reset_password
+  examples: |
+    - Como faço para resetar minha senha?
+    - Esqueci minha senha, o que eu faço?
+    - Preciso resetar minha senha
+    - Como posso redefinir minha senha?
+    - Não consigo acessar minha conta, como resetar a senha?
+
+- intent: ask_location
+  examples: |
+    - Onde fica a sede da empresa?
+    - Qual é o endereço da sede?
+    - Onde está localizada a sede?
+    - Onde fica a empresa?
+    - Qual o endereço de vocês?
+
+- intent: ask_docs
+  examples: |
+    - Como solicito a segunda via do diploma?
+    - Qual é o prazo para emissão do histórico escolar?
+    - Como consulto o andamento do meu pedido de documentação?
+    - Onde posso autenticar meus documentos?
+    - Como obtenho uma declaração de matrícula?
+
+- intent: ask_form
+  examples: |
+    - Como preencho o formulário socioeconômico?
+    - Quais documentos preciso anexar ao formulário socioeconômico?
+    - Qual é o prazo para enviar o formulário socioeconômico?
+    - Quem posso procurar se tiver dúvidas sobre o formulário socioeconômico?
+    - Onde encontro o formulário socioeconômico?
