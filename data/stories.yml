@@ -1,82 +1,826 @@
-version: "3.0"
-
+version: "3.1"
 stories:
-- story: greet path
+- story: greeting
   steps:
   - intent: greet
   - action: utter_greet
 
-- story: goodbye path
+- story: goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- story: ask hours path
+- story: acessar_fluxo_sem_email_institucional
   steps:
-  - intent: ask_hours
-  - action: utter_ask_hours
+  - intent: acessar_fluxo_sem_email_institucional
+  - action: utter_acessar_fluxo_sem_email_institucional
 
-- story: ask reset password path
+- story: criar_login_sem_matricula
   steps:
-  - intent: ask_reset_password
-  - action: utter_ask_reset_password
+  - intent: criar_login_sem_matricula
+  - action: utter_criar_login_sem_matricula
 
-- story: ask location path
+- story: acessar_fluxo_como
   steps:
-  - intent: ask_location
-  - action: utter_ask_location
+  - intent: acessar_fluxo_como
+  - action: utter_acessar_fluxo_como
 
-- story: fallback path
+- story: link_nao_chega_email
   steps:
-  - intent: fallback
-  - action: utter_fallback
+  - intent: link_nao_chega_email
+  - action: utter_link_nao_chega_email
+
+- story: esqueci_senha_fluxo
+  steps:
+  - intent: esqueci_senha_fluxo
+  - action: utter_esqueci_senha_fluxo
+
+- story: atualizar_senha_fluxo
+  steps:
+  - intent: atualizar_senha_fluxo
+  - action: utter_atualizar_senha_fluxo
+
+- story: retomar_inscricao_fluxo
+  steps:
+  - intent: retomar_inscricao_fluxo
+  - action: utter_retomar_inscricao_fluxo
+
+- story: edital_nao_aparece_fluxo
+  steps:
+  - intent: edital_nao_aparece_fluxo
+  - action: utter_edital_nao_aparece_fluxo
+
+- story: curso_nao_aparece_fluxo
+  steps:
+  - intent: curso_nao_aparece_fluxo
+  - action: utter_curso_nao_aparece_fluxo
+
+- story: significado_concessao_bolsa
+  steps:
+  - intent: significado_concessao_bolsa
+  - action: utter_significado_concessao_bolsa
+
+- story: recurso_edital_fluxo
+  steps:
+  - intent: recurso_edital_fluxo
+  - action: utter_recurso_edital_fluxo
+
+- story: substituir_documento_inscricao
+  steps:
+  - intent: substituir_documento_inscricao
+  - action: utter_substituir_documento_inscricao
+
+- story: formato_documentos_inscricao
+  steps:
+  - intent: formato_documentos_inscricao
+  - action: utter_formato_documentos_inscricao
+
+- story: documentacao_nao_legivel
+  steps:
+  - intent: documentacao_nao_legivel
+  - action: utter_documentacao_nao_legivel
+
+- story: documentos_necessarios_inscricao
+  steps:
+  - intent: documentos_necessarios_inscricao
+  - action: utter_documentos_necessarios_inscricao
+
+- story: documentos_perfil_1
+  steps:
+  - intent: documentos_perfil_1
+  - action: utter_documentos_perfil_1
+
+- story: documentos_perfil_2
+  steps:
+  - intent: documentos_perfil_2
+  - action: utter_documentos_perfil_2
+
+- story: documentos_perfil_3
+  steps:
+  - intent: documentos_perfil_3
+  - action: utter_documentos_perfil_3
+
+- story: o_que_e_rg
+  steps:
+  - intent: o_que_e_rg
+  - action: utter_o_que_e_rg
+
+- story: cnh_substituir_rg
+  steps:
+  - intent: cnh_substituir_rg
+  - action: utter_cnh_substituir_rg
+
+- story: certidao_nascimento_rg
+  steps:
+  - intent: certidao_nascimento_rg
+  - action: utter_certidao_nascimento_rg
+
+- story: documentos_comprovar_cpf
+  steps:
+  - intent: documentos_comprovar_cpf
+  - action: utter_documentos_comprovar_cpf
+
+- story: enviar_cpf_familiares
+  steps:
+  - intent: enviar_cpf_familiares
+  - action: utter_enviar_cpf_familiares
+
+- story: rg_comprovar_cpf
+  steps:
+  - intent: rg_comprovar_cpf
+  - action: utter_rg_comprovar_cpf
+
+- story: documentos_comprovar_conta_bancaria
+  steps:
+  - intent: documentos_comprovar_conta_bancaria
+  - action: utter_documentos_comprovar_conta_bancaria
+
+- story: conta_bancaria_responsavel
+  steps:
+  - intent: conta_bancaria_responsavel
+  - action: utter_conta_bancaria_responsavel
+
+- story: conta_bancaria_menor_18
+  steps:
+  - intent: conta_bancaria_menor_18
+  - action: utter_conta_bancaria_menor_18
+
+- story: comprovante_conta_bancaria_digital
+  steps:
+  - intent: comprovante_conta_bancaria_digital
+  - action: utter_comprovante_conta_bancaria_digital
+
+- story: comprovante_conta_poupanca
+  steps:
+  - intent: comprovante_conta_poupanca
+  - action: utter_comprovante_conta_poupanca
+
+- story: escrever_dados_conta_comprovante
+  steps:
+  - intent: escrever_dados_conta_comprovante
+  - action: utter_escrever_dados_conta_comprovante
+
+- story: frente_verso_cartao_conta_bancaria
+  steps:
+  - intent: frente_verso_cartao_conta_bancaria
+  - action: utter_frente_verso_cartao_conta_bancaria
+
+- story: cobrir_dados_credito_cartao
+  steps:
+  - intent: cobrir_dados_credito_cartao
+  - action: utter_cobrir_dados_credito_cartao
+
+- story: documentos_bolsa_familia
+  steps:
+  - intent: documentos_bolsa_familia
+  - action: utter_documentos_bolsa_familia
+
+- story: cartao_bolsa_familia
+  steps:
+  - intent: cartao_bolsa_familia
+  - action: utter_cartao_bolsa_familia
+
+- story: extrato_bolsa_familia
+  steps:
+  - intent: extrato_bolsa_familia
+  - action: utter_extrato_bolsa_familia
+
+- story: acesso_app_bolsa_familia
+  steps:
+  - intent: acesso_app_bolsa_familia
+  - action: utter_acesso_app_bolsa_familia
+
+- story: documentos_bpc
+  steps:
+  - intent: documentos_bpc
+  - action: utter_documentos_bpc
+
+- story: documentos_cadunico
+  steps:
+  - intent: documentos_cadunico
+  - action: utter_documentos_cadunico
+
+- story: cadunico_atualizado
+  steps:
+  - intent: cadunico_atualizado
+  - action: utter_cadunico_atualizado
+
+- story: documento_comprovar_renda_familiar
+  steps:
+  - intent: documento_comprovar_renda_familiar
+  - action: utter_documento_comprovar_renda_familiar
+
+- story: contracheque_comprovar_renda
+  steps:
+  - intent: contracheque_comprovar_renda
+  - action: utter_contracheque_comprovar_renda
+
+- story: todos_enviar_declaracao_renda
+  steps:
+  - intent: todos_enviar_declaracao_renda
+  - action: utter_todos_enviar_declaracao_renda
+
+- story: assinatura_digital_declaracao_renda
+  steps:
+  - intent: assinatura_digital_declaracao_renda
+  - action: utter_assinatura_digital_declaracao_renda
+
+- story: assinatura_gov_br_declaracao_renda
+  steps:
+  - intent: assinatura_gov_br_declaracao_renda
+  - action: utter_assinatura_gov_br_declaracao_renda
+
+- story: renda_bruta_familiar_declaracao
+  steps:
+  - intent: renda_bruta_familiar_declaracao
+  - action: utter_renda_bruta_familiar_declaracao
+
+- story: mesma_declaracao_renda_edital_passado
+  steps:
+  - intent: mesma_declaracao_renda_edital_passado
+  - action: utter_mesma_declaracao_renda_edital_passado
+- story: editar_respostas_formulario
+  steps:
+  - intent: editar_respostas_formulario
+  - action: utter_editar_respostas_formulario
+
+- story: alterar_resposta_prepreenchida
+  steps:
+  - intent: alterar_resposta_prepreenchida
+  - action: utter_alterar_resposta_prepreenchida
+
+- story: o_que_e_nome_social
+  steps:
+  - intent: o_que_e_nome_social
+  - action: utter_o_que_e_nome_social
+
+- story: periodo_ensino_medio_integrado
+  steps:
+  - intent: periodo_ensino_medio_integrado
+  - action: utter_periodo_ensino_medio_integrado
+
+- story: moradia_estudantil_nao_resido
+  steps:
+  - intent: moradia_estudantil_nao_resido
+  - action: utter_moradia_estudantil_nao_resido
+
+- story: o_que_e_bpc
+  steps:
+  - intent: o_que_e_bpc
+  - action: utter_o_que_e_bpc
+
+- story: o_que_e_bolsa_familia
+  steps:
+  - intent: o_que_e_bolsa_familia
+  - action: utter_o_que_e_bolsa_familia
+
+- story: o_que_e_cadunico
+  steps:
+  - intent: o_que_e_cadunico
+  - action: utter_o_que_e_cadunico
+
+- story: cadunico_e_bolsa_familia
+  steps:
+  - intent: cadunico_e_bolsa_familia
+  - action: utter_cadunico_e_bolsa_familia
+
+- story: contabilizar_nucleo_familiar
+  steps:
+  - intent: contabilizar_nucleo_familiar
+  - action: utter_contabilizar_nucleo_familiar
+
+- story: bolsas_estudantis_ifpe
+  steps:
+  - intent: bolsas_estudantis_ifpe
+  - action: utter_bolsas_estudantis_ifpe
+
+- story: nao_recebe_mais_bolsa
+  steps:
+  - intent: nao_recebe_mais_bolsa
+  - action: utter_nao_recebe_mais_bolsa
+
+- story: tipos_bolsas_estudantis_ifpe
+  steps:
+  - intent: tipos_bolsas_estudantis_ifpe
+  - action: utter_tipos_bolsas_estudantis_ifpe
+
+- story: identificar_valor_bolsas
+  steps:
+  - intent: identificar_valor_bolsas
+  - action: utter_identificar_valor_bolsas
+
+- story: morar_no_alojamento
+  steps:
+  - intent: morar_no_alojamento
+  - action: utter_morar_no_alojamento
+
+- story: anos_ensino_fundamental
+  steps:
+  - intent: anos_ensino_fundamental
+  - action: utter_anos_ensino_fundamental
+
+- story: anos_ensino_medio
+  steps:
+  - intent: anos_ensino_medio
+  - action: utter_anos_ensino_medio
+
+- story: ensino_medio_integrado_ifpe
+  steps:
+  - intent: ensino_medio_integrado_ifpe
+  - action: utter_ensino_medio_integrado_ifpe
+
+- story: adicionar_informacoes_familiar
+  steps:
+  - intent: adicionar_informacoes_familiar
+  - action: utter_adicionar_informacoes_familiar
+
+- story: adicionar_familiar_invalido
+  steps:
+  - intent: adicionar_familiar_invalido
+  - action: utter_adicionar_familiar_invalido
+
+- story: adicionar_familiar_faltando
+  steps:
+  - intent: adicionar_familiar_faltando
+  - action: utter_adicionar_familiar_faltando
+
+- story: adicionar_familiar_repetido
+  steps:
+  - intent: adicionar_familiar_repetido
+  - action: utter_adicionar_familiar_repetido
+
+- story: data_nascimento_familiar
+  steps:
+  - intent: data_nascimento_familiar
+  - action: utter_data_nascimento_familiar
+
+- story: grau_parentesco
+  steps:
+  - intent: grau_parentesco
+  - action: utter_grau_parentesco
+
+- story: rendimento_mensal_familiar
+  steps:
+  - intent: rendimento_mensal_familiar
+  - action: utter_rendimento_mensal_familiar
+
+- story: aposentadoria_parcela_emprestimo
+  steps:
+  - intent: aposentadoria_parcela_emprestimo
+  - action: utter_aposentadoria_parcela_emprestimo
+
+- story: rendimento_autonomo
+  steps:
+  - intent: rendimento_autonomo
+  - action: utter_rendimento_autonomo
+
+- story: rendimento_empregado_domestico
+  steps:
+  - intent: rendimento_empregado_domestico
+  - action: utter_rendimento_empregado_domestico
+
+- story: rendimento_varias_fontes
+  steps:
+  - intent: rendimento_varias_fontes
+  - action: utter_rendimento_varias_fontes
+
+- story: rendimento_seguro_desemprego
+  steps:
+  - intent: rendimento_seguro_desemprego
+  - action: utter_rendimento_seguro_desemprego
+
+- story: rendimento_negocio_proprio
+  steps:
+  - intent: rendimento_negocio_proprio
+  - action: utter_rendimento_negocio_proprio
+
+- story: rendimento_aposentadoria_emprestimo
+  steps:
+  - intent: rendimento_aposentadoria_emprestimo
+  - action: utter_rendimento_aposentadoria_emprestimo
+
+- story: verificar_data_parentesco
+  steps:
+  - intent: verificar_data_parentesco
+  - action: utter_verificar_data_parentesco
+
+- story: botao_enviar_desativado
+  steps:
+  - intent: botao_enviar_desativado
+  - action: utter_botao_enviar_desativado
+
+- story: thank_you
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+
+- story: sorry
+  steps:
+  - intent: sorry
+  - action: utter_sorry
+
+- story: ask_information
+  steps:
+  - intent: ask_information
+  - action: utter_ask_information
+
+- story: affirm
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- story: deny
+  steps:
+  - intent: deny
+  - action: utter_deny
+
+- story: positive_feedback
+  steps:
+  - intent: positive_feedback
+  - action: utter_positive_feedback
+
+- story: negative_feedback
+  steps:
+  - intent: negative_feedback
+  - action: utter_negative_feedback
+
+- story: ask_help
+  steps:
+  - intent: ask_help
+  - action: utter_ask_help
+
+- story: out_of_scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- story: small_talk
+  steps:
+  - intent: small_talk
+  - action: utter_small_talk
 
 - story: greet with name
   steps:
   - intent: provide_name
   - action: action_greet_user
 
-- story: ask docs path 1
+rules:
+- rule: respond to greeting
   steps:
-  - intent: ask_docs
-  - action: utter_ask_docs_1
+  - intent: greet
+  - action: utter_greet
 
-- story: ask docs path 2
+- rule: respond to goodbye
   steps:
-  - intent: ask_docs
-  - action: utter_ask_docs_2
+  - intent: goodbye
+  - action: utter_goodbye
 
-- story: ask docs path 3
+- rule: respond to substituir_documento_inscricao
   steps:
-  - intent: ask_docs
-  - action: utter_ask_docs_3
+  - intent: substituir_documento_inscricao
+  - action: utter_substituir_documento_inscricao
 
-- story: ask docs path 4
+- rule: respond to formato_documentos_inscricao
   steps:
-  - intent: ask_docs
-  - action: utter_ask_docs_4
+  - intent: formato_documentos_inscricao
+  - action: utter_formato_documentos_inscricao
 
-- story: ask docs path 5
+- rule: respond to documentacao_nao_legivel
   steps:
-  - intent: ask_docs
-  - action: utter_ask_docs_5
+  - intent: documentacao_nao_legivel
+  - action: utter_documentacao_nao_legivel
 
-- story: ask form path 1
+- rule: respond to documentos_necessarios_inscricao
   steps:
-  - intent: ask_form
-  - action: utter_ask_form_1
+  - intent: documentos_necessarios_inscricao
+  - action: utter_documentos_necessarios_inscricao
 
-- story: ask form path 2
+- rule: respond to documentos_perfil_1
   steps:
-  - intent: ask_form
-  - action: utter_ask_form_2
+  - intent: documentos_perfil_1
+  - action: utter_documentos_perfil_1
 
-- story: ask form path 3
+- rule: respond to documentos_perfil_2
   steps:
-  - intent: ask_form
-  - action: utter_ask_form_3
+  - intent: documentos_perfil_2
+  - action: utter_documentos_perfil_2
 
-- story: ask form path 4
+- rule: respond to documentos_perfil_3
   steps:
-  - intent: ask_form
-  - action: utter_ask_form_4
+  - intent: documentos_perfil_3
+  - action: utter_documentos_perfil_3
+
+- rule: respond to o_que_e_rg
+  steps:
+  - intent: o_que_e_rg
+  - action: utter_o_que_e_rg
+
+- rule: respond to cnh_substituir_rg
+  steps:
+  - intent: cnh_substituir_rg
+  - action: utter_cnh_substituir_rg
+
+- rule: respond to certidao_nascimento_rg
+  steps:
+  - intent: certidao_nascimento_rg
+  - action: utter_certidao_nascimento_rg
+
+- rule: respond to documentos_comprovar_cpf
+  steps:
+  - intent: documentos_comprovar_cpf
+  - action: utter_documentos_comprovar_cpf
+
+- rule: respond to enviar_cpf_familiares
+  steps:
+  - intent: enviar_cpf_familiares
+  - action: utter_enviar_cpf_familiares
+
+- rule: respond to rg_comprovar_cpf
+  steps:
+  - intent: rg_comprovar_cpf
+  - action: utter_rg_comprovar_cpf
+
+- rule: respond to documentos_comprovar_conta_bancaria
+  steps:
+  - intent: documentos_comprovar_conta_bancaria
+  - action: utter_documentos_comprovar_conta_bancaria
+
+- rule: respond to conta_bancaria_responsavel
+  steps:
+  - intent: conta_bancaria_responsavel
+  - action: utter_conta_bancaria_responsavel
+
+- rule: respond to conta_bancaria_menor_18
+  steps:
+  - intent: conta_bancaria_menor_18
+  - action: utter_conta_bancaria_menor_18
+
+- rule: respond to comprovante_conta_bancaria_digital
+  steps:
+  - intent: comprovante_conta_bancaria_digital
+  - action: utter_comprovante_conta_bancaria_digital
+
+- rule: respond to comprovante_conta_poupanca
+  steps:
+  - intent: comprovante_conta_poupanca
+  - action: utter_comprovante_conta_poupanca
+
+- rule: respond to escrever_dados_conta_comprovante
+  steps:
+  - intent: escrever_dados_conta_comprovante
+  - action: utter_escrever_dados_conta_comprovante
+
+- rule: respond to frente_verso_cartao_conta_bancaria
+  steps:
+  - intent: frente_verso_cartao_conta_bancaria
+  - action: utter_frente_verso_cartao_conta_bancaria
+
+- rule: respond to cobrir_dados_credito_cartao
+  steps:
+  - intent: cobrir_dados_credito_cartao
+  - action: utter_cobrir_dados_credito_cartao
+
+- rule: respond to documentos_bolsa_familia
+  steps:
+  - intent: documentos_bolsa_familia
+  - action: utter_documentos_bolsa_familia
+
+- rule: respond to cartao_bolsa_familia
+  steps:
+  - intent: cartao_bolsa_familia
+  - action: utter_cartao_bolsa_familia
+
+- rule: respond to extrato_bolsa_familia
+  steps:
+  - intent: extrato_bolsa_familia
+  - action: utter_extrato_bolsa_familia
+
+- rule: respond to acesso_app_bolsa_familia
+  steps:
+  - intent: acesso_app_bolsa_familia
+  - action: utter_acesso_app_bolsa_familia
+
+- rule: respond to documentos_bpc
+  steps:
+  - intent: documentos_bpc
+  - action: utter_documentos_bpc
+
+- rule: respond to documentos_cadunico
+  steps:
+  - intent: documentos_cadunico
+  - action: utter_documentos_cadunico
+
+- rule: respond to cadunico_atualizado
+  steps:
+  - intent: cadunico_atualizado
+  - action: utter_cadunico_atualizado
+
+- rule: respond to documento_comprovar_renda_familiar
+  steps:
+  - intent: documento_comprovar_renda_familiar
+  - action: utter_documento_comprovar_renda_familiar
+
+- rule: respond to contracheque_comprovar_renda
+  steps:
+  - intent: contracheque_comprovar_renda
+  - action: utter_contracheque_comprovar_renda
+
+- rule: respond to todos_enviar_declaracao_renda
+  steps:
+  - intent: todos_enviar_declaracao_renda
+  - action: utter_todos_enviar_declaracao_renda
+
+- rule: respond to assinatura_digital_declaracao_renda
+  steps:
+  - intent: assinatura_digital_declaracao_renda
+  - action: utter_assinatura_digital_declaracao_renda
+
+- rule: respond to assinatura_gov_br_declaracao_renda
+  steps:
+  - intent: assinatura_gov_br_declaracao_renda
+  - action: utter_assinatura_gov_br_declaracao_renda
+
+- rule: respond to renda_bruta_familiar_declaracao
+  steps:
+  - intent: renda_bruta_familiar_declaracao
+  - action: utter_renda_bruta_familiar_declaracao
+
+- rule: respond to mesma_declaracao_renda_edital_passado
+  steps:
+  - intent: mesma_declaracao_renda_edital_passado
+  - action: utter_mesma_declaracao_renda_edital_passado
+
+- rule: respond to editar_respostas_formulario
+  steps:
+  - intent: editar_respostas_formulario
+  - action: utter_editar_respostas_formulario
+
+- rule: respond to alterar_resposta_prepreenchida
+  steps:
+  - intent: alterar_resposta_prepreenchida
+  - action: utter_alterar_resposta_prepreenchida
+
+- rule: respond to o_que_e_nome_social
+  steps:
+  - intent: o_que_e_nome_social
+  - action: utter_o_que_e_nome_social
+
+- rule: respond to periodo_ensino_medio_integrado
+  steps:
+  - intent: periodo_ensino_medio_integrado
+  - action: utter_periodo_ensino_medio_integrado
+
+- rule: respond to moradia_estudantil_nao_resido
+  steps:
+  - intent: moradia_estudantil_nao_resido
+  - action: utter_moradia_estudantil_nao_resido
+
+- rule: respond to o_que_e_bpc
+  steps:
+  - intent: o_que_e_bpc
+  - action: utter_o_que_e_bpc
+
+- rule: respond to o_que_e_bolsa_familia
+  steps:
+  - intent: o_que_e_bolsa_familia
+  - action: utter_o_que_e_bolsa_familia
+
+- rule: respond to o_que_e_cadunico
+  steps:
+  - intent: o_que_e_cadunico
+  - action: utter_o_que_e_cadunico
+
+- rule: respond to cadunico_e_bolsa_familia
+  steps:
+  - intent: cadunico_e_bolsa_familia
+  - action: utter_cadunico_e_bolsa_familia
+
+- rule: respond to contabilizar_nucleo_familiar
+  steps:
+  - intent: contabilizar_nucleo_familiar
+  - action: utter_contabilizar_nucleo_familiar
+
+- rule: respond to bolsas_estudantis_ifpe
+  steps:
+  - intent: bolsas_estudantis_ifpe
+  - action: utter_bolsas_estudantis_ifpe
+
+- rule: respond to nao_recebe_mais_bolsa
+  steps:
+  - intent: nao_recebe_mais_bolsa
+  - action: utter_nao_recebe_mais_bolsa
+
+- rule: respond to tipos_bolsas_estudantis_ifpe
+  steps:
+  - intent: tipos_bolsas_estudantis_ifpe
+  - action: utter_tipos_bolsas_estudantis_ifpe
+
+- rule: respond to identificar_valor_bolsas
+  steps:
+  - intent: identificar_valor_bolsas
+  - action: utter_identificar_valor_bolsas
+
+- rule: respond to morar_no_alojamento
+  steps:
+  - intent: morar_no_alojamento
+  - action: utter_morar_no_alojamento
+
+- rule: respond to anos_ensino_fundamental
+  steps:
+  - intent: anos_ensino_fundamental
+  - action: utter_anos_ensino_fundamental
+
+- rule: respond to anos_ensino_medio
+  steps:
+  - intent: anos_ensino_medio
+  - action: utter_anos_ensino_medio
+
+- rule: respond to ensino_medio_integrado_ifpe
+  steps:
+  - intent: ensino_medio_integrado_ifpe
+  - action: utter_ensino_medio_integrado_ifpe
+
+- rule: respond to adicionar_informacoes_familiar
+  steps:
+  - intent: adicionar_informacoes_familiar
+  - action: utter_adicionar_informacoes_familiar
+
+- rule: respond to adicionar_familiar_invalido
+  steps:
+  - intent: adicionar_familiar_invalido
+  - action: utter_adicionar_familiar_invalido
+
+- rule: respond to adicionar_familiar_faltando
+  steps:
+  - intent: adicionar_familiar_faltando
+  - action: utter_adicionar_familiar_faltando
+
+- rule: respond to adicionar_familiar_repetido
+  steps:
+  - intent: adicionar_familiar_repetido
+  - action: utter_adicionar_familiar_repetido
+
+- rule: respond to data_nascimento_familiar
+  steps:
+  - intent: data_nascimento_familiar
+  - action: utter_data_nascimento_familiar
+
+- rule: respond to grau_parentesco
+  steps:
+  - intent: grau_parentesco
+  - action: utter_grau_parentesco
+
+- rule: respond to rendimento_mensal_familiar
+  steps:
+  - intent: rendimento_mensal_familiar
+  - action: utter_rendimento_mensal_familiar
+
+- rule: respond to aposentadoria_parcela_emprestimo
+  steps:
+  - intent: aposentadoria_parcela_emprestimo
+  - action: utter_aposentadoria_parcela_emprestimo
+
+- rule: respond to rendimento_autonomo
+  steps:
+  - intent: rendimento_autonomo
+  - action: utter_rendimento_autonomo
+
+- rule: respond to rendimento_empregado_domestico
+  steps:
+  - intent: rendimento_empregado_domestico
+  - action: utter_rendimento_empregado_domestico
+
+- rule: respond to rendimento_varias_fontes
+  steps:
+  - intent: rendimento_varias_fontes
+  - action: utter_rendimento_varias_fontes
+
+- rule: respond to rendimento_seguro_desemprego
+  steps:
+  - intent: rendimento_seguro_desemprego
+  - action: utter_rendimento_seguro_desemprego
+
+- rule: respond to rendimento_negocio_proprio
+  steps:
+  - intent: rendimento_negocio_proprio
+  - action: utter_rendimento_negocio_proprio
+
+- rule: respond to rendimento_aposentadoria_emprestimo
+  steps:
+  - intent: rendimento_aposentadoria_emprestimo
+  - action: utter_rendimento_aposentadoria_emprestimo
+
+- rule: respond to verificar_data_parentesco
+  steps:
+  - intent: verificar_data_parentesco
+  - action: utter_verificar_data_parentesco
+
+- rule: respond to botao_enviar_desativado
+  steps:
+  - intent: botao_enviar_desativado
+  - action: utter_botao_enviar_desativado
+
+- rule: default fallback action
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default

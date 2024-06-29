@@ -14,7 +14,7 @@ class ActionGreetUser(Action):
     ) -> List[Dict[Text, Any]]:
         name = tracker.get_slot('name')
         if not name:
-            dispatcher.utter_message(text="Oi, Eu sou o BotIF. Como posso ajudar você hoje?")
+            dispatcher.utter_message(text="Oi, Eu sou o seu assistente virtual. Como posso ajudar você hoje?")
         else:
-            dispatcher.utter_message(text=f"Oi {name}, Eu sou o BotIF. Como posso ajudar você hoje?")
+            dispatcher.utter_message(text=f"Oi {name}, Eu sou o seu assistente virtual. Como posso ajudar você hoje?")
         return []

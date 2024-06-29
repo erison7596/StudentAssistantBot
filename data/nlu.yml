@@ -5,55 +5,749 @@ nlu:
   examples: |
     - Olá
     - Oi
-    - Ei
     - Bom dia
     - Boa tarde
     - Boa noite
+    - E aí
+    - Olá, tudo bem?
+    - Oi, tudo bem?
+    - Como vai?
+    - Como está?
+    - Oi, como você está?
+    - Oi, como vai?
+    - Salve
+    - Oi, tudo certo?
+    - Oi, como estão as coisas?
+    - Olá, como vai você?
+    - Olá, como você está?
+    - Bom dia, tudo bem?
+    - Boa tarde, tudo bem?
+    - Boa noite, tudo bem?
+    - Oi, como estão as coisas?
+    - Olá, como estão as coisas?
+    - Tudo bem?
+    - Como estão as coisas?
+    - E aí, como vai?
+    - Oi, como estão as coisas por aí?
+    - Olá, como está indo?
+    - Olá, como está?
+    - Oi, como vai você?
+    - Olá, como está indo?
+    - Tudo certo?
+    - Oi, como estão as coisas?
+    - Olá, como vão as coisas?
+    - Oi, tudo bem com você?
+    - Olá, tudo bem com você?
+    - Bom dia, como vai?
+    - Boa tarde, como vai?
+    - Boa noite, como vai?
+    - Oi, como está indo?
+    - Olá, como vai?
+    - Tudo bem por aí?
+    - Como está indo?
+    - Como vai você?
+    - E aí, tudo bem?
+    - Oi, tudo certo com você?
+    - Olá, tudo certo com você?
+    - Bom dia, tudo certo?
+    - Boa tarde, tudo certo?
+    - Boa noite, tudo certo?
+    - Oi, como estão indo as coisas?
+    - Olá, como estão indo as coisas?
+    - Tudo certo com você?
+    - Como está você?
+    - E aí, como está?
+    - Oi, como vai tudo?
+    - Olá, como vai tudo?
+    - Bom dia, tudo certo com você?
+    - Boa tarde, tudo certo com você?
+    - Boa noite, tudo certo com você?
 
 - intent: goodbye
   examples: |
     - Tchau
-    - Até logo
     - Adeus
     - Até mais
+    - Até logo
+    - Até breve
+    - Até a próxima
+    - Fui
     - Falou
+    - Tchau, até mais
+    - Tchau, até logo
+    - Tchau, até breve
+    - Tchau, até a próxima
+    - Adeus, até mais
+    - Adeus, até logo
+    - Adeus, até breve
+    - Adeus, até a próxima
+    - Até
+    - Até mais tarde
+    - Até daqui a pouco
+    - Nos vemos depois
+    - Nos vemos em breve
+    - Até outro dia
+    - Vou indo
+    - Tenho que ir
+    - Falamos depois
+    - Falamos em breve
+    - Até logo mais
+    - Até já
+    - Até amanhã
+    - Boa noite, até mais
+    - Boa tarde, até logo
+    - Bom dia, até breve
+    - Despeço-me
+    - Vou embora
+    - Vou sair
+    - Preciso ir
+    - Obrigado, até mais
+    - Valeu, até logo
+    - Foi bom falar com você, até a próxima
+    - Nos falamos depois
+    - Até a próxima vez
+    - Tchau tchau
+    - Adeus, até mais ver
+    - Até mais, tenha um bom dia
+    - Até logo, tenha uma boa tarde
+    - Até breve, tenha uma boa noite
+    - Foi um prazer, até mais
+    - Fico por aqui, até logo
+    - Até mais, tudo de bom
+    - Adeus, se cuida
+    - Até mais, até a próxima
+    - Despedida
+    - Vou nessa
+    - Até logo, se cuida
+    - Até breve, até a próxima
 
-- intent: ask_hours
+- intent: acessar_fluxo_sem_email_institucional
   examples: |
+    - Posso acessar o Fluxo.IFPE se eu não tiver e-mail institucional?
+    - É possível acessar o Fluxo.IFPE sem um e-mail institucional?
+    - Consigo usar o Fluxo.IFPE sem ter um e-mail institucional?
+    - Tenho que ter um e-mail institucional para acessar o Fluxo.IFPE?
+
+- intent: criar_login_sem_matricula
+  examples: |
+    - Ainda não possuo nº de matrícula. Posso criar o meu login no Fluxo.IFPE mesmo assim?
+    - Posso criar meu login no Fluxo.IFPE sem número de matrícula?
+    - Como faço para criar um login no Fluxo.IFPE sem número de matrícula?
+    - Não tenho matrícula, posso acessar o Fluxo.IFPE?
+
+- intent: acessar_fluxo_como
+  examples: |
+    - Como faço para acessar o sistema Fluxo.IFPE?
+    - Qual o procedimento para acessar o Fluxo.IFPE?
+    - Como entro no Fluxo.IFPE?
+    - Me explique como acessar o Fluxo.IFPE
+
+- intent: link_nao_chega_email
+  examples: |
+    - O link para criação da senha do Fluxo.IFPE não está chegando no meu e-mail institucional. O que fazer?
+    - Não recebi o link para criar a senha do Fluxo.IFPE no meu e-mail. O que faço?
+    - O que fazer se o link de criação de senha do Fluxo.IFPE não chegar no e-mail institucional?
+    - Link para criação de senha do Fluxo.IFPE não chegou, como proceder?
+
+- intent: esqueci_senha_fluxo
+  examples: |
+    - Esqueci minha senha de acesso ao Fluxo. O que fazer para recuperar meu acesso?
+    - Como recupero minha senha do Fluxo.IFPE?
+    - Não lembro minha senha do Fluxo, como recupero?
+    - O que fazer para redefinir a senha do Fluxo.IFPE?
+
+- intent: atualizar_senha_fluxo
+  examples: |
+    - Não estou conseguindo atualizar a senha de acesso ao Fluxo.IFPE. O que fazer?
+    - Não consigo mudar minha senha do Fluxo.IFPE, o que faço?
+    - Como atualizar a senha do Fluxo.IFPE?
+    - Problemas para atualizar a senha do Fluxo.IFPE, como resolver?
+
+- intent: retomar_inscricao_fluxo
+  examples: |
+    - Iniciei minha inscrição e o sistema Fluxo.IFPE caiu. Preciso preencher todas as perguntas do formulário socioeconômico novamente?
+    - O sistema Fluxo.IFPE caiu, preciso recomeçar minha inscrição?
+    - Minha inscrição foi interrompida no Fluxo.IFPE, preciso começar de novo?
+    - Tenho que refazer minha inscrição no Fluxo.IFPE se o sistema cair?
+
+- intent: edital_nao_aparece_fluxo
+  examples: |
+    - A inscrição para o edital do meu campus não está aparecendo no meu Fluxo.IFPE. O que fazer?
+    - O edital do meu campus não aparece no Fluxo.IFPE, o que faço?
+    - Não encontro o edital do meu campus no Fluxo.IFPE, como resolver?
+    - Como proceder se o edital do campus não aparece no Fluxo.IFPE?
+
+- intent: curso_nao_aparece_fluxo
+  examples: |
+    - Em meu Fluxo.IFPE não está aparecendo os dados do meu curso atual. O que fazer?
+    - Meu curso não aparece no Fluxo.IFPE, como resolver?
+    - Como faço para ver os dados do meu curso no Fluxo.IFPE?
+    - O que fazer se os dados do curso não aparecem no Fluxo.IFPE?
+
+- intent: significado_concessao_bolsa
+  examples: |
+    - O que significa "Concessão da bolsa"?
+    - Qual o significado de "Concessão da bolsa"?
+    - O que quer dizer "Concessão da bolsa"?
+    - Pode explicar o termo "Concessão da bolsa"?
+
+- intent: recurso_edital_fluxo
+  examples: |
+    - Como faço para entrar com recurso contra o resultado preliminar do edital no sistema Fluxo.IFPE?
+    - Como envio um recurso contra o resultado do edital no Fluxo.IFPE?
+    - Qual o procedimento para recurso no Fluxo.IFPE?
+    - Como recorrer contra o resultado preliminar do edital no Fluxo.IFPE?
+
+- intent: substituir_documento_inscricao
+  examples: |
+    - Posso substituir o documento que enviei na inscrição?
+    - É possível trocar o documento enviado na inscrição?
+    - Como substituo o documento anexado na inscrição?
+    - Dá para alterar o documento enviado na inscrição?
+
+- intent: formato_documentos_inscricao
+  examples: |
+    - Qual o formato aceito para os documentos que deverei anexar em minha inscrição?
+    - Quais formatos de documentos são aceitos na inscrição?
+    - Como devo enviar os documentos na inscrição?
+    - Em que formato os documentos devem ser anexados na inscrição?
+
+- intent: documentacao_nao_legivel
+  examples: |
+    - Minha inscrição poderá ser reprovada se a minha documentação não estiver legível?
+    - Posso ser reprovado se os documentos não estiverem legíveis?
+    - O que acontece se minha documentação estiver ilegível?
+    - Documentação ilegível reprova a inscrição?
+
+- intent: documentos_necessarios_inscricao
+  examples: |
+    - Quais são os documentos necessários para se inscrever no programa?
+    - Que documentos preciso para me inscrever no programa?
+    - Quais documentos devo anexar na inscrição?
+    - Documentos necessários para inscrição no programa?
+
+- intent: documentos_perfil_1
+  examples: |
+    - Quais documentos devem ser anexados pelo/a estudante do Perfil 1?
+    - Que documentos são necessários para estudantes do Perfil 1?
+    - Estudantes do Perfil 1 precisam de quais documentos?
+    - Documentos exigidos para Perfil 1?
+
+- intent: documentos_perfil_2
+  examples: |
+    - Quais documentos devem ser anexados pelo/a estudante do Perfil 2?
+    - Que documentos são necessários para estudantes do Perfil 2?
+    - Estudantes do Perfil 2 precisam de quais documentos?
+    - Documentos exigidos para Perfil 2?
+
+- intent: documentos_perfil_3
+  examples: |
+    - Quais documentos devem ser anexados pelo/a estudante do Perfil 3?
+    - Que documentos são necessários para estudantes do Perfil 3?
+    - Estudantes do Perfil 3 precisam de quais documentos?
+    - Documentos exigidos para Perfil 3?
+
+- intent: o_que_e_rg
+  examples: |
+    - O que é RG?
+    - Qual o significado de RG?
+    - O que significa RG?
+    - Pode explicar o que é RG?
+
+- intent: cnh_substituir_rg
+  examples: |
+    - Posso enviar a Carteira Nacional de Habilitação (CNH) no lugar do RG?
+    - A CNH pode substituir o RG?
+    - Posso usar a CNH em vez do RG?
+    - A CNH é aceita como RG?
+
+- intent: certidao_nascimento_rg
+  examples: |
+    - Posso enviar a Certidão de Nascimento no lugar do RG?
+    - A Certidão de Nascimento pode substituir o RG?
+    - Posso usar a Certidão de Nascimento em vez do RG?
+    - A Certidão de Nascimento é aceita como RG?
+
+- intent: documentos_comprovar_cpf
+  examples: |
+    - Quais documentos são aceitos para comprovar o CPF?
+    - Que documentos posso usar para comprovar o CPF?
+    - Como comprovar o CPF?
+    - Documentos aceitos para CPF?
+
+- intent: enviar_cpf_familiares
+  examples: |
+    - Preciso enviar o CPF de todos os meus familiares?
+    - Devo enviar o CPF de todos os familiares?
+    - Quais CPF devo enviar?
+    - CPF de familiares é necessário?
+
+- intent: rg_comprovar_cpf
+  examples: |
+    - Posso enviar o RG para comprovar o meu CPF ou o CPF do meu familiar?
+    - O RG pode comprovar o CPF?
+    - Posso usar o RG para comprovar o CPF?
+    - RG serve para comprovar o CPF?
+
+- intent: documentos_comprovar_conta_bancaria
+  examples: |
+    - Quais documentos são aceitos para comprovar a conta bancária?
+    - Que documentos posso usar para comprovar a conta bancária?
+    - Como comprovar a conta bancária?
+    - Documentos aceitos para conta bancária?
+
+- intent: conta_bancaria_responsavel
+  examples: |
+    - Se eu não tiver conta bancária, posso anexar a conta bancária do meu responsável?
+    - Posso usar a conta bancária do responsável?
+    - Conta bancária do responsável é aceita?
+    - Se eu não tiver conta, posso usar a do responsável?
+
+- intent: conta_bancaria_menor_18
+  examples: |
+    - Se eu tiver menos de 18 anos, posso anexar a conta bancária do meu responsável?
+    - Menor de 18 pode usar conta bancária do responsável?
+    - Conta bancária de responsável é aceita para menor de 18?
+    - Menor de idade pode usar conta de responsável?
+
+- intent: comprovante_conta_bancaria_digital
+  examples: |
+    - Posso enviar o comprovante da minha conta bancária digital?
+    - Comprovante de conta bancária digital é aceito?
+    - Posso usar comprovante de conta digital?
+    - Conta bancária digital é válida?
+
+- intent: comprovante_conta_poupanca
+  examples: |
+    - Posso enviar o comprovante da minha conta poupança?
+    - Comprovante de conta poupança é aceito?
+    - Posso usar comprovante de conta poupança?
+    - Conta poupança é válida?
+
+- intent: escrever_dados_conta_comprovante
+  examples: |
+    - Posso escrever ou digitar os dados da minha conta e enviar como comprovante de conta bancária?
+    - Posso digitar os dados da conta para enviar?
+    - Dados escritos da conta são aceitos como comprovante?
+    - Posso enviar dados digitados da conta como comprovante?
+
+- intent: frente_verso_cartao_conta_bancaria
+  examples: |
+    - Devo enviar a frente e o verso do meu cartão para comprovar os meus dados bancários?
+    - Preciso enviar frente e verso do cartão para comprovar conta bancária?
+    - Frente e verso do cartão são necessários para comprovar conta?
+    - Comprovante de conta precisa de frente e verso do cartão?
+
+- intent: cobrir_dados_credito_cartao
+  examples: |
+    - Posso cobrir os dados referentes a função de crédito do meu comprovante de conta bancária?
+    - Posso esconder os dados de crédito do comprovante de conta bancária?
+    - Dados de crédito do cartão podem ser cobertos?
+    - Posso ocultar dados de crédito do cartão no comprovante?
+
+- intent: documentos_bolsa_familia
+  examples: |
+    - Quais documentos devo anexar para comprovar o recebimento do Programa Bolsa Família?
+    - Documentos necessários para comprovar Bolsa Família?
+    - O que preciso enviar para comprovar o Bolsa Família?
+    - Como comprovar o recebimento do Bolsa Família?
+
+- intent: cartao_bolsa_familia
+  examples: |
+    - Posso anexar o cartão do Bolsa Família para comprovar o recebimento do programa?
+    - Cartão do Bolsa Família pode comprovar recebimento?
+    - Posso usar o cartão do Bolsa Família como comprovante?
+    - Cartão do Bolsa Família é aceito como comprovante?
+
+- intent: extrato_bolsa_familia
+  examples: |
+    - O que fazer se o extrato bancário do Programa Bolsa Família não possuir o nome do/a beneficiário/a e/ou o nome do programa?
+    - Extrato do Bolsa Família sem nome ou programa, o que fazer?
+    - Como proceder se o extrato do Bolsa Família não tiver o nome ou programa?
+    - Bolsa Família extrato sem nome ou programa, como comprovar?
+
+- intent: acesso_app_bolsa_familia
+  examples: |
+    - Como faço para ter acesso ao aplicativo do Programa Bolsa Família?
+    - Como baixar o aplicativo do Bolsa Família?
+    - Onde encontro o app do Bolsa Família?
+    - Aplicativo do Bolsa Família, como acessar?
+
+- intent: documentos_bpc
+  examples: |
+    - Quais documentos devo anexar para comprovar o recebimento do Benefício de Prestação Continuada (BPC)?
+    - Documentos necessários para comprovar BPC?
+    - O que preciso enviar para comprovar o BPC?
+    - Como comprovar o recebimento do BPC?
+
+- intent: documentos_cadunico
+  examples: |
+    - Quais documentos devo anexar para comprovar o CadÚnico?
+    - Documentos necessários para comprovar CadÚnico?
+    - O que preciso enviar para comprovar o CadÚnico?
+    - Como comprovar o CadÚnico?
+
+- intent: cadunico_atualizado
+  examples: |
+    - O meu CadÚnico precisa estar atualizado?
+    - CadÚnico precisa de atualização?
+    - Atualização do CadÚnico é necessária?
+    - CadÚnico atualizado é obrigatório?
+
+- intent: documento_comprovar_renda_familiar
+  examples: |
+    - Qual documento devo anexar para comprovar a renda familiar?
+    - Documento necessário para comprovar renda familiar?
+    - O que preciso enviar para comprovar a renda familiar?
+    - Como comprovar a renda familiar?
+
+- intent: contracheque_comprovar_renda
+  examples: |
+    - Posso enviar contracheque, comprovante de aposentadoria ou a carteira de trabalho para comprovar a renda familiar?
+    - Contracheque ou carteira de trabalho pode comprovar renda familiar?
+    - Posso usar comprovante de aposentadoria para comprovar renda familiar?
+    - Que documentos posso usar para comprovar a renda familiar?
+
+- intent: todos_enviar_declaracao_renda
+  examples: |
+    - Todos os estudantes precisam enviar a Declaração de renda familiar?
+    - Declaração de renda familiar é obrigatória para todos?
+    - Quem precisa enviar a Declaração de renda familiar?
+    - Declaração de renda familiar deve ser enviada por todos?
+
+- intent: assinatura_digital_declaracao_renda
+  examples: |
+    - Posso digitar o meu nome no lugar da assinatura na Declaração de renda bruta familiar?
+    - Assinatura digital pode substituir a física na Declaração de renda bruta familiar?
+    - Posso usar assinatura digital na Declaração de renda bruta familiar?
+    - Assinatura digital é válida na Declaração de renda bruta familiar?
+
+- intent: assinatura_gov_br_declaracao_renda
+  examples: |
+    - Posso utilizar minha assinatura eletrônica do GOV.BR na Declaração de renda bruta familiar?
+    - Assinatura do GOV.BR é aceita na Declaração de renda bruta familiar?
+    - Posso usar assinatura do GOV.BR na Declaração de renda bruta familiar?
+    - Assinatura GOV.BR é válida na Declaração de renda bruta familiar?
+
+- intent: renda_bruta_familiar_declaracao
+  examples: |
+    - Qual renda deverá constar na Declaração de Renda Bruta Familiar?
+    - Que renda colocar na Declaração de Renda Bruta Familiar?
+    - Como preencher a renda na Declaração de Renda Bruta Familiar?
+    - Renda na Declaração de Renda Bruta Familiar, qual incluir?
+
+- intent: mesma_declaracao_renda_edital_passado
+  examples: |
+    - Posso anexar a mesma Declaração de Renda Bruta familiar que enviei no edital passado?
+    - Declaração de renda do edital passado pode ser usada novamente?
+    - Posso usar a Declaração de renda antiga para novo edital?
+    - Declaração de renda antiga é aceita no novo edital?
+
+- intent: editar_respostas_formulario
+  examples: |
+    - Posso editar minhas respostas no formulário?
+    - É possível editar as respostas no formulário?
+    - Como edito minhas respostas no formulário?
+    - Dá para corrigir as respostas do formulário?
+
+- intent: alterar_resposta_prepreenchida
+  examples: |
+    - Posso alterar uma resposta do formulário que já veio pré-preenchida automaticamente?
+    - É possível mudar uma resposta pré-preenchida do formulário?
+    - Como alterar resposta pré-preenchida no formulário?
+    - Dá para corrigir respostas automáticas do formulário?
+
+- intent: o_que_e_nome_social
+  examples: |
+    - O que é nome social?
+    - Qual o significado de nome social?
+    - O que significa nome social?
+    - Pode explicar o que é nome social?
+
+- intent: periodo_ensino_medio_integrado
+  examples: |
+    - Sou estudante do Ensino Médio Integrado. O que devo responder na pergunta que pede “Período”?
+    - Como respondo a pergunta sobre período se sou estudante do Ensino Médio Integrado?
+    - Qual período informo sendo do Ensino Médio Integrado?
+    - O que responder sobre período no Ensino Médio Integrado?
+
+- intent: moradia_estudantil_nao_resido
+  examples: |
+    - Fui aprovado/a no Edital do Programa Moradia Estudantil e no meu formulário diz que “Não” resido atualmente na Moradia Estudantil do meu campus”. O que eu faço?
+    - O que fazer se no formulário diz que não resido na Moradia Estudantil do campus?
+    - Como proceder se o formulário diz que não moro na Moradia Estudantil?
+    - Formulário indica que não resido na Moradia Estudantil, o que fazer?
+
+- intent: o_que_e_bpc
+  examples: |
+    - O que é Benefício de Prestação Continuada – BPC?
+    - O que significa BPC?
+    - Pode explicar o que é BPC?
+    - O que é o Benefício de Prestação Continuada?
+
+- intent: o_que_e_bolsa_familia
+  examples: |
+    - O que é Programa Bolsa Família?
+    - O que significa Bolsa Família?
+    - Pode explicar o que é Bolsa Família?
+    - O que é o Programa Bolsa Família?
+
+- intent: o_que_e_cadunico
+  examples: |
+    - O que é CadÚnico?
+    - O que significa CadÚnico?
+    - Pode explicar o que é CadÚnico?
+    - O que é o Cadastro Único?
+
+- intent: cadunico_e_bolsa_familia
+  examples: |
+    - Minha família está inscrita no CadÚnico e também recebe o Bolsa Família. Qual opção devo marcar no formulário?
+    - O que marcar no formulário se minha família está no CadÚnico e recebe Bolsa Família?
+    - CadÚnico e Bolsa Família, qual opção selecionar no formulário?
+    - Como preencher o formulário se minha família recebe Bolsa Família e está no CadÚnico?
+
+- intent: contabilizar_nucleo_familiar
+  examples: |
+    - Quem eu devo contabilizar para responder à pergunta: “Quantas pessoas compõem o seu núcleo familiar”?
+    - Como contabilizar as pessoas do núcleo familiar no formulário?
+    - Quem incluir no núcleo familiar?
+    - Núcleo familiar, quem devo contar?
+
+- intent: bolsas_estudantis_ifpe
+  examples: |
+    - Na pergunta “Recebe algum tipo de bolsa estudantil”, devo considerar bolsa de Pesquisa, Extensão e Monitoria?
+    - Bolsas de Pesquisa, Extensão e Monitoria contam como bolsa estudantil?
+    - Devo incluir bolsas de Pesquisa, Extensão e Monitoria como bolsa estudantil?
+    - Pesquisa, Extensão e Monitoria são bolsas estudantis?
+
+- intent: nao_recebe_mais_bolsa
+  examples: |
+    - Na pergunta “Recebe algum tipo de bolsa estudantil”, o que devo responder se eu já recebi algum tipo de bolsa e não estou mais recebendo no atual momento?
+    - Como responder sobre bolsa estudantil se não estou mais recebendo?
+    - Já recebi bolsa, mas não recebo mais, o que responder?
+    - O que responder se já tive bolsa estudantil mas não recebo mais?
+
+- intent: tipos_bolsas_estudantis_ifpe
+  examples: |
+    - Quais são os tipos de bolsa estudantil do IFPE?
+    - Que tipos de bolsa estudantil existem no IFPE?
+    - Tipos de bolsa estudantil no IFPE?
+    - Quais bolsas estudantis o IFPE oferece?
+
+- intent: identificar_valor_bolsas
+  examples: |
+    - Caso eu receba mais de uma bolsa estudantil do IFPE, como devo identificar o valor das bolsas recebidas?
+    - Como identificar o valor das bolsas se recebo mais de uma?
+    - Recebo mais de uma bolsa, como somar os valores?
+    - O que fazer se recebo várias bolsas estudantis?
+
+- intent: morar_no_alojamento
+  examples: |
+    - Para estudar no IFPE, passei a morar no alojamento estudantil do campus, retornando para a casa da minha família aos finais de semana ou sempre que possível. Neste caso, o que devo responder na pergunta: “Mudou de endereço para estudar no IFPE”?
+    - Moro no alojamento do campus, como responder sobre mudança de endereço?
+    - Estudo no IFPE e moro no alojamento, o que responder sobre endereço?
+    - O que responder sobre endereço se moro no alojamento do campus?
+
+- intent: anos_ensino_fundamental
+  examples: |
+    - Na pergunta: “Como você acessou à educação básica (Ensino Fundamental)”, quais são os anos/séries do Ensino Fundamental?
+    - Quais anos compõem o Ensino Fundamental?
+    - Anos do Ensino Fundamental, quais são?
+    - Quais são os anos do Ensino Fundamental?
+
+- intent: anos_ensino_medio
+  examples: |
+    - Na pergunta: “Como você acessa/acessou à educação básica (Ensino Médio)”, quais são os anos/séries do Ensino Médio?
+    - Quais anos compõem o Ensino Médio?
+    - Anos do Ensino Médio, quais são?
+    - Quais são os anos do Ensino Médio?
+
+- intent: ensino_medio_integrado_ifpe
+  examples: |
+    - Na pergunta: “Como você acessa/acessou à educação básica (Ensino Médio)”, o que devo responder se estiver cursando o Ensino Médio integrado no IFPE?
+    - Como responder sobre Ensino Médio se estou no Ensino Médio integrado do IFPE?
+    - Ensino Médio integrado no IFPE, como responder?
+    - O que responder se estou no Ensino Médio integrado do IFPE?
+
+- intent: adicionar_informacoes_familiar
+  examples: |
+    - Na questão “Adicionar informações do familiar”, o que devo descrever?
+    - O que descrever na questão de informações do familiar?
+    - Como preencher a questão de informações do familiar?
+    - Informações do familiar, o que devo escrever?
+
+- intent: adicionar_familiar_invalido
+  examples: |
+    - O que devo fazer se eu já tiver descrito todos os componentes da minha família e mesmo assim o formulário continua mostrando a questão “Adicionar informações do familiar”?
+    - Formulário mostra adicionar familiar mesmo após descrever todos, o que fazer?
+    - O que fazer se o formulário continua pedindo para adicionar familiar?
+    - Adicionar familiar no formulário, mas já descrevi todos, o que fazer?
+
+- intent: adicionar_familiar_faltando
+  examples: |
+    - O que devo fazer se ainda estiver faltando descrever algum dos meus familiares, mas o formulário não está mais mostrando a questão “Adicionar informações do familiar”?
+    - Formulário não mostra para adicionar familiar que falta, o que fazer?
+    - O que fazer se o formulário não deixa adicionar familiar que falta?
+    - Familiar faltando no formulário, o que fazer?
+
+- intent: adicionar_familiar_repetido
+  examples: |
+    - Na questão “Adicionar informações do familiar”, repeti o nome de um mesmo familiar mais de uma vez. O que devo fazer?
+    - Nome de familiar repetido na questão, o que fazer?
+    - Como corrigir nome de familiar repetido no formulário?
+    - O que fazer se repeti o nome de um familiar na questão?
+
+- intent: data_nascimento_familiar
+  examples: |
+    - Na questão “Adicionar informações do familiar”, como devo descrever a data de nascimento do meu familiar?
+    - Como escrever a data de nascimento do familiar no formulário?
+    - Data de nascimento do familiar, como descrever?
+    - O que colocar na data de nascimento do familiar?
+
+- intent: grau_parentesco
+  examples: |
+    - Na questão “Adicionar informações do familiar”, o que significa “Grau de parentesco”?
+    - Grau de parentesco, o que significa?
+    - O que é grau de parentesco?
+    - Pode explicar o que é grau de parentesco?
+
+- intent: rendimento_mensal_familiar
+  examples: |
+    - Na questão “Adicionar informações do familiar”, o que devo descrever em “Rendimento Mensal”?
+    - O que colocar em rendimento mensal na questão do familiar?
+    - Como preencher rendimento mensal do familiar?
+    - Rendimento mensal do familiar, o que escrever?
+
+- intent: aposentadoria_parcela_emprestimo
+  examples: |
+    - Na questão “Adicionar informações do familiar : Rendimento mensal”, o que devo colocar se o familiar possuir uma aposentadoria e não estiver recebendo o valor total do seu benefício porque está pagando a parcela de um empréstimo consignado?
+    - Rendimento mensal com aposentadoria e empréstimo, o que informar?
+    - Como descrever rendimento de aposentadoria com empréstimo?
+    - Aposentadoria com empréstimo consignado, o que informar no rendimento?
+
+- intent: rendimento_autonomo
+  examples: |
+    - Na questão “Adicionar informações do familiar : Rendimento mensal”, o que devo colocar se o familiar trabalha como vendedor autônomo e não tem rendimento fixo?
+    - Rendimento mensal de vendedor autônomo, como informar?
+    - Como descrever rendimento de autônomo no formulário?
+    - O que informar sobre rendimento de vendedor autônomo?
+
+- intent: rendimento_empregado_domestico
+  examples: |
+    - Na questão “Adicionar informações do familiar : Rendimento mensal”, o que devo colocar se o familiar trabalha como empregado doméstico e ganha um salário mínimo?
+    - Rendimento mensal de empregado doméstico, como informar?
+    - Como descrever rendimento de empregado doméstico no formulário?
+    - O que informar sobre rendimento de empregado doméstico?
+
+- intent: rendimento_varias_fontes
+  examples: |
+    - Na questão “Adicionar informações do familiar : Rendimento mensal”, o que devo fazer se um dos meus familiares possui mais de uma fonte de renda?
+    - Rendimento mensal com várias fontes, como informar?
+    - Como descrever rendimento de familiar com várias fontes?
+    - O que informar sobre rendimento com várias fontes?
+
+- intent: rendimento_seguro_desemprego
+  examples: |
+    - Na questão “Adicionar informações do familiar : Rendimento mensal”, o que devo fazer se um dos meus familiares estiver recebendo o seguro-desemprego?
+    - Rendimento mensal com seguro-desemprego, como informar?
+    - Como descrever rendimento de seguro-desemprego no formulário?
+    - O que informar sobre rendimento de seguro-desemprego?
+
+- intent: rendimento_negocio_proprio
+  examples: |
+    - Na questão “Adicionar informações do familiar : Rendimento mensal”, o que devo fazer se um dos meus familiares for dono do próprio negócio e não tiver um salário fixo?
+    - Rendimento mensal de negócio próprio, como informar?
+    - Como descrever rendimento de negócio próprio no formulário?
+    - O que informar sobre rendimento de negócio próprio?
+
+- intent: rendimento_aposentadoria_emprestimo
+  examples: |
+    - Na questão “Adicionar informações do familiar : Rendimento mensal”, o que devo fazer se um dos meus familiares estiver recebendo aposentadoria e não estiver recebendo o valor total do seu benefício porque está pagando a parcela de um empréstimo consignado?
+    - Rendimento de aposentadoria com empréstimo consignado, como informar?
+    - Como descrever rendimento de aposentadoria com empréstimo consignado?
+    - O que informar sobre rendimento de aposentadoria com empréstimo consignado?
+
+- intent: verificar_data_parentesco
+  examples: |
+    - O que devo fazer se o formulário estiver mostrando “Verifique a data de nascimento informada” ou “Verifique o grau de parentesco informado”?
+    - Verificar data de nascimento ou grau de parentesco, o que fazer?
+    - Como corrigir data de nascimento ou grau de parentesco no formulário?
+    - O que fazer se aparecer verificar data ou grau de parentesco?
+
+- intent: botao_enviar_desativado
+  examples: |
+    - Estou tentando enviar o formulário de inscrição, mas o botão “Enviar” está desativado. O que devo fazer?
+    - Botão de enviar desativado no formulário, o que fazer?
+    - Como enviar formulário se o botão está desativado?
+    - O que fazer se não consigo enviar o formulário?
+
+- intent: thank_you
+  examples: |
+    - Obrigado
+    - Obrigada
+    - Muito obrigado
+    - Valeu
+    - Agradeço a sua ajuda
+    - Obrigado pela ajuda
+
+- intent: sorry
+  examples: |
+    - Desculpe
+    - Sinto muito
+    - Foi mal
+    - Peço desculpas
+    - Perdão
+
+- intent: ask_information
+  examples: |
+    - Como faço para acessar o sistema?
     - Qual é o horário de funcionamento?
-    - Quais são os horários de abertura?
-    - A que horas vocês abrem?
-    - Qual o horário de funcionamento?
-    - Quando vocês estão abertos?
+    - Você pode me ajudar com meu login?
+    - Como posso alterar minha senha?
+    - Quais são os documentos necessários para inscrição?
 
-- intent: ask_reset_password
+- intent: affirm
   examples: |
-    - Como faço para resetar minha senha?
-    - Esqueci minha senha, o que eu faço?
-    - Preciso resetar minha senha
-    - Como posso redefinir minha senha?
-    - Não consigo acessar minha conta, como resetar a senha?
+    - Sim
+    - Claro
+    - Com certeza
+    - Isso mesmo
 
-- intent: ask_location
+- intent: deny
   examples: |
-    - Onde fica a sede da empresa?
-    - Qual é o endereço da sede?
-    - Onde está localizada a sede?
-    - Onde fica a empresa?
-    - Qual o endereço de vocês?
+    - Não
+    - De jeito nenhum
+    - Não, obrigado
 
-- intent: ask_docs
+- intent: positive_feedback
   examples: |
-    - Como solicito a segunda via do diploma?
-    - Qual é o prazo para emissão do histórico escolar?
-    - Como consulto o andamento do meu pedido de documentação?
-    - Onde posso autenticar meus documentos?
-    - Como obtenho uma declaração de matrícula?
+    - Isso foi útil
+    - Gostei da sua ajuda
 
-- intent: ask_form
+- intent: negative_feedback
   examples: |
-    - Como preencho o formulário socioeconômico?
-    - Quais documentos preciso anexar ao formulário socioeconômico?
-    - Qual é o prazo para enviar o formulário socioeconômico?
-    - Quem posso procurar se tiver dúvidas sobre o formulário socioeconômico?
-    - Onde encontro o formulário socioeconômico?
+    - Não foi útil
+    - Estou frustrado
+    - Isso não me ajudou
+
+- intent: ask_help
+  examples: |
+    - Preciso de ajuda
+    - Você pode me ajudar?
+    - Como faço isso?
+    - Estou com um problema
+    - Não sei como proceder
+
+- intent: out_of_scope
+  examples: |
+    - Você conhece o tempo de hoje?
+    - Me conte uma piada
+    - Qual é a capital da França?
+    - Quantos anos você tem?
+
+- intent: small_talk
+  examples: |
+    - Como você está?
+    - Tudo bem?
+    - O que você está fazendo?
+    - Me conte algo interessante

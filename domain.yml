@@ -2,18 +2,98 @@ version: "3.1"
 intents:
   - greet
   - goodbye
+  - acessar_fluxo_sem_email_institucional
+  - criar_login_sem_matricula
+  - acessar_fluxo_como
+  - link_nao_chega_email
+  - esqueci_senha_fluxo
+  - atualizar_senha_fluxo
+  - retomar_inscricao_fluxo
+  - edital_nao_aparece_fluxo
+  - curso_nao_aparece_fluxo
+  - significado_concessao_bolsa
+  - recurso_edital_fluxo
+  - substituir_documento_inscricao
+  - formato_documentos_inscricao
+  - documentacao_nao_legivel
+  - documentos_necessarios_inscricao
+  - documentos_perfil_1
+  - documentos_perfil_2
+  - documentos_perfil_3
+  - o_que_e_rg
+  - cnh_substituir_rg
+  - certidao_nascimento_rg
+  - documentos_comprovar_cpf
+  - enviar_cpf_familiares
+  - rg_comprovar_cpf
+  - documentos_comprovar_conta_bancaria
+  - conta_bancaria_responsavel
+  - conta_bancaria_menor_18
+  - comprovante_conta_bancaria_digital
+  - comprovante_conta_poupanca
+  - escrever_dados_conta_comprovante
+  - frente_verso_cartao_conta_bancaria
+  - cobrir_dados_credito_cartao
+  - documentos_bolsa_familia
+  - cartao_bolsa_familia
+  - extrato_bolsa_familia
+  - acesso_app_bolsa_familia
+  - documentos_bpc
+  - documentos_cadunico
+  - cadunico_atualizado
+  - documento_comprovar_renda_familiar
+  - contracheque_comprovar_renda
+  - todos_enviar_declaracao_renda
+  - assinatura_digital_declaracao_renda
+  - assinatura_gov_br_declaracao_renda
+  - renda_bruta_familiar_declaracao
+  - mesma_declaracao_renda_edital_passado
+  - editar_respostas_formulario
+  - alterar_resposta_prepreenchida
+  - o_que_e_nome_social
+  - periodo_ensino_medio_integrado
+  - moradia_estudantil_nao_resido
+  - o_que_e_bpc
+  - o_que_e_bolsa_familia
+  - o_que_e_cadunico
+  - cadunico_e_bolsa_familia
+  - contabilizar_nucleo_familiar
+  - bolsas_estudantis_ifpe
+  - nao_recebe_mais_bolsa
+  - tipos_bolsas_estudantis_ifpe
+  - identificar_valor_bolsas
+  - morar_no_alojamento
+  - anos_ensino_fundamental
+  - anos_ensino_medio
+  - ensino_medio_integrado_ifpe
+  - adicionar_informacoes_familiar
+  - adicionar_familiar_invalido
+  - adicionar_familiar_faltando
+  - adicionar_familiar_repetido
+  - data_nascimento_familiar
+  - grau_parentesco
+  - rendimento_mensal_familiar
+  - aposentadoria_parcela_emprestimo
+  - rendimento_autonomo
+  - rendimento_empregado_domestico
+  - rendimento_varias_fontes
+  - rendimento_seguro_desemprego
+  - rendimento_negocio_proprio
+  - rendimento_aposentadoria_emprestimo
+  - verificar_data_parentesco
+  - botao_enviar_desativado
+  - thank_you
+  - sorry
+  - ask_information
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - ask_hours
-  - ask_reset_password
-  - ask_location
-  - fallback
+  - positive_feedback
+  - negative_feedback
+  - ask_help
+  - out_of_scope
+  - small_talk
   - provide_name
-  - ask_docs
-  - ask_form
+  - nlu_fallback 
 
 slots:
   name:
@@ -24,81 +104,321 @@ slots:
 
 responses:
   utter_greet:
-    - text: "Olá! Como posso ajudar você hoje?"
-    - text: "Oi! Em que posso te ajudar?"
-    - text: "Olá! O que você precisa?"
+    - text: "Olá! Como posso ajudar?"
+    - text: "Oi! Em que posso ser útil?"
+    - text: "Olá! Precisa de alguma coisa?"
+    - text: "Oi! Como posso te ajudar hoje?"
 
   utter_goodbye:
     - text: "Tchau! Tenha um ótimo dia!"
+    - text: "Até logo! Foi bom falar com você."
+    - text: "Adeus! Espero ter ajudado."
+    - text: "Até mais! Qualquer coisa, estarei aqui."
+  
+  utter_acessar_fluxo_sem_email_institucional:
+    - text: "Não. Você só poderá criar o seu acesso ao sistema Fluxo.IFPE depois de realizar o cadastro de sua senha no Q-Acadêmico e criar seu e-mail institucional do IFPE."
 
-  utter_iamabot:
-    - text: "Eu sou um assistente virtual."
+  utter_criar_login_sem_matricula:
+    - text: "Não. Para realizar o seu primeiro acesso no Fluxo.IFPE você precisa primeiro ter cadastrado sua senha no Q-Acadêmico e criado seu e-mail institucional. Porém, só é possível cadastrar-se no Q-Acadêmico se já possuir o seu nº de matrícula. Para saber informações sobre o seu nº de matrícula procure o Setor de Registros Escolares do campus."
 
-  utter_happy:
-    - text: "Que bom ouvir isso!"
+  utter_acessar_fluxo_como:
+    - text: "Para acessar o Sistema Fluxo (depois de realizar o cadastro de sua senha no Q-Acadêmico e criar seu e-mail institucional), siga este passo a passo:\n1- Acesse a página do Sistema Fluxo.IFPE: https://fluxo.ifpe.edu.br/accounts/login\n2- Clique em 'Esqueci minha senha'\n3- Depois de clicar em 'esqueci minha senha', você será direcionado para outra página e deverá informar os números do seu CPF (sem traços ou pontos) e clicar em 'ok'\n4- Após isso, você receberá em seu e-mail institucional um link para a criação da senha do Sistema Fluxo.IFPE.\nDepois de criar a senha, você já pode voltar ao Sistema Fluxo e realizar o login informando o seu CPF e a senha que você criou."
 
-  utter_cheer_up:
-    - text: "Não se preocupe, tudo vai ficar bem."
+  utter_link_nao_chega_email:
+    - text: "Se o link não chegou na Caixa de entrada do seu e-mail institucional, confira na caixa de Spam e o Lixo eletrônico. Caso não tenha recebido, entre em contato com o setor de Serviço Social do campus."
 
-  utter_did_that_help:
-    - text: "Isso ajudou você?"
+  utter_esqueci_senha_fluxo:
+    - text: "Para atualizar sua senha de acesso ao Fluxo, siga este passo a passo:\n1- Acesse a página do Sistema Fluxo.IFPE: https://fluxo.ifpe.edu.br/accounts/login\n2- Clique em 'Esqueci minha senha'\n3- Depois de clicar em 'esqueci minha senha', você será direcionado para outra página e deverá informar os números do seu CPF (sem traços ou pontos) e clicar em 'ok'\n4- Após isso, você receberá em seu e-mail institucional um link para a criação da senha do Sistema Fluxo.IFPE.\nSe o link não chegou na Caixa de entrada do seu e-mail institucional, lembre-se de conferir a caixa de Spam e o Lixo eletrônico. Depois de criar a nova senha, você já pode voltar ao Sistema Fluxo e realizar o login informando o seu CPF e a senha que você criou."
 
-  utter_ask_hours:
-    - text: "Nosso horário de funcionamento é das 9h às 18h, de segunda a sexta-feira."
+  utter_atualizar_senha_fluxo:
+    - text: "Observe se a nova senha que está tentando criar atende aos requisitos de complexidade exigidos pelo sistema, que são: Não pode ser igual ao CPF nem ao E-mail institucional\nTer no mínimo 8 caracteres\nTer no mínimo 1 letra maiúscula\nTer no mínimo 1 letra minúscula\nTer no mínimo 1 número\nTer no mínimo 1 caractere especial. Exemplos: . , : ; * - = + @ & # $ ( /"
 
-  utter_ask_reset_password:
-    - text: "Você pode resetar sua senha clicando no link 'Esqueci minha senha' na página de login."
+  utter_retomar_inscricao_fluxo:
+    - text: "Não. Todas as questões que você já respondeu ficam salvas. Você deve retomar sua inscrição a partir do ponto em que ela foi interrompida."
 
-  utter_ask_location:
-    - text: "Nossa sede fica na Avenida Central, 123, São Paulo."
+  utter_edital_nao_aparece_fluxo:
+    - text: "Entre em contato com o setor de Serviço Social do campus para os encaminhamentos necessários."
 
-  utter_fallback:
-    - text: "Desculpe, não entendi sua pergunta. Pode reformular ou tentar novamente?"
-    - text: "Não entendi sua pergunta. Pode tentar reformular?"
-    - text: "Poderia repetir sua pergunta de outra forma? Não consegui entender."
+  utter_curso_nao_aparece_fluxo:
+    - text: "Se você mudou de curso e ainda não solicitou um novo e-mail institucional precisará fazer isso para que os dados sejam atualizados no sistema Fluxo. Siga esse passo a passo:\n1- Solicite um novo e-mail institucional em https://meuemail.ifpe.edu.br\n2- Quando você informar sua nova matrícula no ato da solicitação, o sistema identificará que já existe um e-mail institucional criado associado ao seu CPF, e irá atualizar apenas sua matrícula e curso, mantendo o mesmo endereço de e-mail e senha.\n3- Após o sistema atualizar os dados, você deverá fazer o login novamente em https://fluxo.ifpe.edu.br.\n4- O sistema Fluxo identificará a nova matrícula no ato de login e irá atualizar seus dados automaticamente."
 
-  utter_welcome:
-    - text: "Oi {name}, Eu sou o BotIF. Como posso ajudar você hoje?"
+  utter_significado_concessao_bolsa:
+    - text: "'Concessão da bolsa' significa que você foi aprovado no edital do Programa."
 
-  utter_ask_docs_1:
-    - text: "Para solicitar a segunda via do diploma, você precisa preencher o formulário no nosso site."
-    - text: "A segunda via do diploma pode ser solicitada preenchendo o formulário online disponível no site."
+  utter_recurso_edital_fluxo:
+    - text: "Para enviar recurso você deverá realizar login no sistema Fluxo e acessar 'Minhas Requisições'. Em seguida clique no nome do Programa e depois em 'Duração do recurso' (aperte na caixinha azul que aparece ao lado)."
+  
+  utter_substituir_documento_inscricao:
+    - text: "Dentro do prazo de inscrição previsto no edital você poderá retornar a sua inscrição e alterar os documentos que você anexou, corrigindo possíveis erros. Porém, lembre-se de seguir até o final do formulário e concluir a sua inscrição novamente."
 
-  utter_ask_docs_2:
-    - text: "O prazo para emissão do histórico escolar é de 15 dias úteis."
-    - text: "Leva cerca de 15 dias úteis para emitir o histórico escolar."
+  utter_formato_documentos_inscricao:
+    - text: "Os documentos devem ser enviados em formato PDF ou JPEG (imagem)."
 
-  utter_ask_docs_3:
-    - text: "Você pode consultar o andamento do seu pedido de documentação no portal do aluno."
-    - text: "Acompanhe o status do seu pedido de documentação pelo portal do aluno."
+  utter_documentacao_nao_legivel:
+    - text: "Sim. Não serão aceitos documentos que impeçam a leitura dos dados nele presentes, como por exemplo: imagem tremida, embaçada, cortada, luz de flash, etc."
 
-  utter_ask_docs_4:
-    - text: "A autenticação de documentos pode ser feita no setor de atendimento ao estudante."
-    - text: "Para autenticar documentos, dirija-se ao setor de atendimento ao estudante."
+  utter_documentos_necessarios_inscricao:
+    - text: |
+        "A documentação que deverá ser anexada pelo/a estudante dependerá do seu perfil socioeconômico, havendo três perfis:
 
-  utter_ask_docs_5:
-    - text: "Para obter uma declaração de matrícula, acesse o portal do aluno e solicite o documento."
-    - text: "Você pode solicitar a declaração de matrícula no portal do aluno."
+        PERFIL 1: estudantes cotistas com renda per capita familiar de até 1,5 (um e meio) salário mínimo e estudantes atendidos/as pelo Programa de Moradia Estudantil que ingressaram através de edital;
+        Perfil 2: estudantes com renda per capita familiar de até 1,5 (um e meio) salário mínimo beneficiários/as ou que tenham em seu núcleo familiar beneficiários/as do Programa Bolsa Família ou do Benefício de Prestação Continuada (BPC) e estudantes cadastrados/as ou cuja família seja cadastrada no CadÚnico;
+        Perfil 3: estudantes com renda per capita familiar de até 1,5 (um e meio) salário mínimo que não se incluem no Perfil 1 e 2.
+        Ao realizar a inscrição, a partir das informações declaradas e importadas do Q-Acadêmico o/a estudante será direcionado/a para um desses perfis e lhe será exigida a documentação correspondente ao seu perfil."
 
-  utter_ask_form_1:
-    - text: "O formulário socioeconômico deve ser preenchido online no portal do estudante."
-    - text: "Preencha o formulário socioeconômico no portal do estudante."
+  utter_documentos_perfil_1:
+    - text: |
+        "Os estudantes do perfil 1 devem digitalizar e anexar, em formato PDF ou JPEG, os seguintes documentos:
 
-  utter_ask_form_2:
-    - text: "Você precisa anexar comprovante de renda ao formulário socioeconômico."
-    - text: "Anexe o comprovante de renda ao preencher o formulário socioeconômico."
+        Frente e verso do RG ou outro documento oficial de identificação com foto do/a estudante (CNH, Carteira de Trabalho, Passaporte ou Reservista), para maiores de 18 anos, ou a Certidão de Nascimento, para estudantes menores de 18 anos;
+        CPF do/a estudante;
+        CPF dos membros familiares maiores de 18 anos;
+        Comprovante dos dados bancários em nome do/a estudante: extrato, cartão ou print de aplicativo referente à conta bancária, constando o nome do/a estudante, o nome do banco e os números da agência e da conta."
 
-  utter_ask_form_3:
-    - text: "O prazo para envio do formulário socioeconômico é até o final do mês."
-    - text: "Envie o formulário socioeconômico até o final do mês."
+  utter_documentos_perfil_2:
+    - text: |
+        "Os estudantes do perfil 2 devem digitalizar e anexar, em formato PDF ou JPEG, os seguintes documentos:
 
-  utter_ask_form_4:
-    - text: "Se tiver dúvidas sobre o formulário, entre em contato com o setor de assistência estudantil."
-    - text: "Para dúvidas sobre o formulário, procure o setor de assistência estudantil."
+        Frente e verso do RG ou outro documento oficial de identificação com foto do/a estudante (CNH, Carteira de Trabalho, Passaporte ou Reservista), para maiores de 18 anos, ou a Certidão de Nascimento, para estudantes menores de 18 anos;
+        CPF do/a estudante;
+        CPF dos membros familiares maiores de 18 anos;
+        Comprovante dos dados bancários em nome do/a estudante: extrato, cartão ou print de aplicativo referente à conta bancária, constando o nome do/a estudante, o nome do banco e os números da agência e da conta.
+        Comprovante do programa social:
+        No caso do Programa Bolsa Família, deverá ser anexado o extrato bancário ou print de aplicativo com data do ano atual, em que constem o nome do/a beneficiário/a e o nome do programa.
+        No caso do Benefício de Prestação Continuada (BPC), deverá ser anexado o extrato bancário atualizado com data do ano atual e o cartão do benefício, constando o nome do/a beneficiário/a e o nome do benefício recebido (BPC), ou declaração emitida pelo INSS (com data do ano atual).
+        No caso dos/as estudantes e familiares inscritos/as no CadÚnico, deverá ser anexada a ficha do CadÚnico/Folha Resumo (fornecida pelo CRAS) ou o comprovante de cadastro emitido pelo site: https://cadunico.dataprev.gov.br/#/home. O documento deverá comprovar que o CadÚnico foi atualizado nos últimos 24 meses."
 
-  utter_ask_form_5:
-    - text: "O formulário socioeconômico está disponível na seção de documentos do portal do aluno."
-    - text: "Você encontra o formulário socioeconômico na seção de documentos do portal do aluno."
+  utter_documentos_perfil_3:
+    - text: |
+        "Os estudantes do perfil 3 devem digitalizar e anexar, em formato PDF ou JPEG, os seguintes documentos:
+
+        Frente e verso do RG ou outro documento oficial de identificação com foto do/a estudante (CNH, Carteira de Trabalho, Passaporte ou Reservista), para maiores de 18 anos, ou a Certidão de Nascimento, para estudantes menores de 18 anos;
+        CPF do/a estudante;
+        CPF dos membros familiares maiores de 18 anos;
+        Comprovante dos dados bancários em nome do/a estudante: extrato, cartão ou print de aplicativo referente à conta bancária, constando o nome do/a estudante, o nome do banco e os números da agência e da conta.
+        Declaração de Renda Bruta Familiar datada e assinada (o modelo do documento está no anexo do Edital)."
+
+  utter_o_que_e_rg:
+    - text: "RG é a carteira de identidade de todo brasileiro, formada por dois lados, a frente e o verso do documento."
+
+  utter_cnh_substituir_rg:
+    - text: "Sim. A CNH é aceita como documento de identificação."
+
+  utter_certidao_nascimento_rg:
+    - text: "A Certidão de Nascimento poderá substituir o RG apenas se o/a estudante tiver menos de 18 anos de idade."
+
+  utter_documentos_comprovar_cpf:
+    - text: "Só será aceito documento oficial em que constem o nome e o número do CPF. O CPF pode ser emitido pelo site da Receita Federal: https://servicos.receita.fazenda.gov.br/Servicos/CPF/ImpressaoComprovante/ConsultaImpressao.asp"
+
+  utter_enviar_cpf_familiares:
+    - text: "Você deverá enviar o CPF dos seus familiares maiores de 18 anos. Se o seu familiar tiver menos de 18 anos você deverá descrevê-lo em seu formulário mas não precisará enviar o CPF dele."
+
+  utter_rg_comprovar_cpf:
+    - text: "Se o RG tiver o número do CPF, pode utilizá-lo sim. Mas fique atento que em caso de utilização da versão atual do RG para fins de comprovação do CPF, é necessário anexar a frente e o verso do documento, tendo em vista que nesta versão o nome do titular só consta na frente do documento."
+
+  utter_documentos_comprovar_conta_bancaria:
+    - text: "Para comprovação dos dados bancários, só serão aceitos: extrato ou cartão ou print de aplicativo referente à conta bancária em nome do/a estudante. Atente que neste comprovante precisa contar: o nome do/a estudante, o nome do banco e os números de agência e conta."
+
+  utter_conta_bancaria_responsavel:
+    - text: "Não. A conta bancária deverá ser obrigatoriamente em nome do/a estudante."
+
+  utter_conta_bancaria_menor_18:
+    - text: "Não. Independente da idade do/a estudante, a conta bancária deverá ser obrigatoriamente em seu nome. Em nenhuma situação será aceita conta em nome de terceiros."
+
+  utter_comprovante_conta_bancaria_digital:
+    - text: "Sim. Serão aceitos comprovantes de conta corrente de qualquer instituição bancária (incluindo as contas digitais) OU conta poupança da Caixa Econômica Federal."
+
+  utter_comprovante_conta_poupanca:
+    - text: "Para fins de comprovação de dados serão aceitos comprovantes de conta corrente de qualquer instituição bancária (incluindo as contas digitais) OU conta poupança da Caixa Econômica Federal. Conta poupança de outra instituição bancária não será aceita."
+
+  utter_escrever_dados_conta_comprovante:
+    - text: "Não. Para comprovação dos dados bancários, só serão aceitos: extrato ou cartão ou print de aplicativo referente à conta bancária em nome do/a estudante, constando o nome do/a estudante, o nome do banco e os números de agência e conta."
+
+  utter_frente_verso_cartao_conta_bancaria:
+    - text: "O comprovante de dados bancários precisa apresentar, obrigatoriamente: o nome do/a estudante, o nome do banco e os números de agência e conta. Caso o seu nome esteja em um lado do cartão e os dados da agência e conta estejam de outro, você deverá enviar a frente e o verso do documento."
+
+  utter_cobrir_dados_credito_cartao:
+    - text: "Sim. Se o seu comprovante de dados bancários apresentar os dados referentes a função de crédito de sua conta, cubra o código de segurança ou mesmo o número do cartão. Deixe visível apenas seu nome, o nome do banco e os números de agência e conta."
+
+  utter_documentos_bolsa_familia:
+    - text: "Para comprovar o recebimento do Programa Bolsa Família, você deverá anexar o extrato bancário ou print do aplicativo do programa. Atente que o seu comprovante deve apresentar, obrigatoriamente, o nome da pessoa que recebe o programa; o nome do programa; e a data de recebimento (esta data deve ser do ano atual)."
+
+  utter_cartao_bolsa_familia:
+    - text: "Não. Se você anexar apenas o cartão (ainda que seja o cartão específico do programa), não será possível identificar a data de recebimento do programa. Neste caso, encaminhe junto com o cartão o extrato bancário para atestar a data de recebimento do programa."
+
+  utter_extrato_bolsa_familia:
+    - text: "Neste caso, opte por apresentar algum outro documento que ateste as informações exigidas (o nome da pessoa que recebe o programa; o nome do programa; e a data de recebimento), como por exemplo o print do aplicativo do programa."
+
+  utter_acesso_app_bolsa_familia:
+    - text: "O/A beneficiário do Bolsa Família poderá acessar ao aplicativo do programa na loja de aplicativos do seu celular. É um aplicativo desenvolvido pela Caixa Econômica Federal, onde o/a beneficiário/a pode acompanhar informações sobre o programa."
+
+  utter_documentos_bpc:
+    - text: "Para comprovar o BPC você deverá anexar o extrato bancário do ano atual junto com o cartão do benefício (constando o nome do/a beneficiário/a e o nome do benefício recebido) OU a declaração emitida pelo INSS também no ano atual. A declaração poderá ser acessada pelo site do INSS: https://meu.inss.gov.br/"
+
+  utter_documentos_cadunico:
+    - text: "A comprovação poderá ser feita apresentando a Folha Resumo do Cadastro Único (disponibilizada nos Centros de Referência da Assistência Social - CRAS) ou o Comprovante de Cadastramento gerado através do link: https://cadunico.dataprev.gov.br/#/comprovante"
+
+  utter_cadunico_atualizado:
+    - text: "Sim. Para ser aceito o CadÚnico precisa ter sido atualizado nos últimos 24 meses. A data da última atualização aparecerá no seu comprovante."
+
+  utter_documento_comprovar_renda_familiar:
+    - text: "Para comprovação da renda bruta familiar deverá ser anexada a Declaração prevista no Edital do programa (o modelo da declaração está no Anexo do edital). A declaração deverá ser devidamente preenchida, datada e assinada."
+
+  utter_contracheque_comprovar_renda:
+    - text: "Não. O único documento aceito para comprovação da renda familiar é a Declaração de Renda Bruta Familiar (cujo modelo se encontra no anexo do edital)."
+
+  utter_todos_enviar_declaracao_renda:
+    - text: "Não. A declaração de renda familiar é obrigatória apenas para a comprovação de renda dos/as estudantes do Grupo 3 (aqueles que não são cotistas de renda e não são atendidos pelo edital do Programa de Moradia e que não são atendidos/as pelo Auxílio Brasil/BPC/CadÚnico)."
+
+  utter_assinatura_digital_declaracao_renda:
+    - text: "Não. Somente será aceita a Declaração de renda bruta familiar assinada e com data atualizada."
+
+  utter_assinatura_gov_br_declaracao_renda:
+    - text: "Sim. O documento com assinatura digital (GOV.BR) é regulamentado pelo Decreto Nº 10.543, de 13/11/2020 e tem a mesma validade de um documento com assinatura física."
+
+  utter_renda_bruta_familiar_declaracao:
+    - text: "Deverá constar na Declaração a renda bruta recebida por sua família no mês. Neste caso, você deverá somar o dinheiro recebido por todas os membros da sua família durante o mês (inclua o salário real que cada componente da família recebe, sem considerar os possíveis descontos como vale alimentação, INSS, entre outros)."
+
+  utter_mesma_declaracao_renda_edital_passado:
+    - text: "Não. A declaração de renda familiar deverá estar atualizada. Neste caso, declaração com data anterior à data do Edital atual não será considerada válida."
+  
+  utter_editar_respostas_formulario:
+    - text: "Dentro do prazo de inscrição previsto no edital, você poderá retornar à sua inscrição e alterar suas respostas para corrigir possíveis erros. No entanto, lembre-se de seguir até o final do formulário e concluir novamente sua inscrição. Caso não conclua novamente, sua inscrição será considerada inválida."
+
+  utter_alterar_resposta_prepreenchida:
+    - text: "Não. Algumas respostas do formulário são preenchidas automaticamente a partir de nossas bases de dados. Se identificar que uma informação pré-preenchida está incorreta, procure o Serviço Social do campus para receber orientações sobre a correção."
+
+  utter_o_que_e_nome_social:
+    - text: "Nome social é o nome pelo qual a pessoa travesti, transgênero, transexual e intersexual escolhe ser reconhecida socialmente, uma vez que o seu nome civil (nome de registro) não reflete sua identidade de gênero."
+
+  utter_periodo_ensino_medio_integrado:
+    - text: "Responda o ano letivo que você está cursando no momento atual: 1 se estiver cursando o 1º ano, 2 se estiver cursando o 2º ano e 3 se estiver cursando o 3º ano."
+
+  utter_moradia_estudantil_nao_resido:
+    - text: "Entre em contato com o setor de Serviço Social do campus para receber os encaminhamentos necessários."
+
+  utter_o_que_e_bpc:
+    - text: "BPC é o Benefício de Prestação Continuada, previsto na Lei Orgânica da Assistência Social (LOAS), que garante um salário mínimo mensal à pessoa com deficiência e ao idoso com idade de 65 anos ou mais, desde que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família."
+
+  utter_o_que_e_bolsa_familia:
+    - text: "O Bolsa Família é um programa de transferência de renda e combate à fome, voltado para famílias em situação de pobreza e extrema pobreza."
+
+  utter_o_que_e_cadunico:
+    - text: "O Cadastro Único para Programas Sociais do Governo Federal (CadÚnico) é um instrumento de identificação e caracterização socioeconômica das famílias brasileiras. É utilizado para implementar políticas públicas e selecionar beneficiários, garantindo acesso a programas sociais governamentais."
+
+  utter_cadunico_e_bolsa_familia:
+    - text: "Se sua família está inscrita no CadÚnico e recebe o Bolsa Família, marque a opção “Sim, participamos do Bolsa Família”. Lembre-se de anexar o comprovante do Bolsa Família quando solicitado."
+
+  utter_contabilizar_nucleo_familiar:
+    - text: "Você deve incluir todas as pessoas que residem com você. Se algum membro da família morar em um endereço diferente, mas tiver dependência financeira, também deve ser contabilizado."
+
+  utter_bolsas_estudantis_ifpe:
+    - text: "Sim. Deve considerar qualquer bolsa referente aos programas previstos na Política de Assistência Estudantil do IFPE, incluindo pesquisa (PIBIC, BIA, PIBITI), extensão (PIBEX) e monitoria."
+
+  utter_nao_recebe_mais_bolsa:
+    - text: "Se não estiver recebendo nenhuma bolsa estudantil atualmente, responda “NÃO”."
+
+  utter_tipos_bolsas_estudantis_ifpe:
+    - text: "Consideram-se bolsas estudantis aquelas oferecidas pelos programas de Assistência Estudantil do IFPE, como Apoio à Manutenção Acadêmica, Aquisição de Material de Apoio, Incentivo à Arte e à Cultura, entre outros listados no edital."
+
+  utter_identificar_valor_bolsas:
+    - text: "Some o valor de todas as bolsas que você recebe e informe o total desse valor."
+
+  utter_morar_no_alojamento:
+    - text: "Se reside no alojamento do campus (mesmo que apenas alguns dias da semana), responda “SIM” e identifique o endereço do seu campus."
+
+  utter_anos_ensino_fundamental:
+    - text: "O Ensino Fundamental vai do 1º ao 9º ano."
+
+  utter_anos_ensino_medio:
+    - text: "O Ensino Médio compreende o 1º, 2º e 3º ano."
+
+  utter_ensino_medio_integrado_ifpe:
+    - text: "Se está cursando ou cursou o Ensino Médio no IFPE, responda que acessou através de “Escola pública”."
+
+  utter_adicionar_informacoes_familiar:
+    - text: "Nessa questão, descreva detalhadamente as informações sobre cada membro da sua família que você contabilizou na pergunta inicial sobre o número de pessoas no núcleo familiar."
+
+  utter_adicionar_familiar_invalido:
+    - text: "Certifique-se de ter descrito cada membro da família sem repetições. Se a questão continuar aparecendo, verifique se o número total de membros da família informado no início corresponde ao número de membros descritos."
+
+  utter_adicionar_familiar_faltando:
+    - text: "Verifique quais familiares você já descreveu e se algum ainda falta. Caso falte, retorne ao início do questionário para corrigir o número de membros da família informado inicialmente."
+
+  utter_adicionar_familiar_repetido:
+    - text: "Corrija as informações para evitar repetições de membros da família. Cada familiar deve ser descrito apenas uma vez com todas as informações necessárias."
+
+  utter_data_nascimento_familiar:
+    - text: "A data de nascimento deve ser descrita com o ano (4 dígitos), mês (2 dígitos) e dia (2 dígitos). Por exemplo, se a data de nascimento for 24 de dezembro de 1991, escreva: 1991-12-24."
+
+  utter_grau_parentesco:
+    - text: "Grau de parentesco é o vínculo que você possui com o membro da sua família que está sendo descrito. Por exemplo, mãe, pai, irmão, cônjuge, etc."
+
+  utter_rendimento_mensal_familiar:
+    - text: "Informe a renda bruta mensal de cada membro da família, considerando todos os rendimentos recebidos no mês, sem descontos. Se a pessoa tiver mais de uma fonte de renda, some os valores para informar o total."
+
+  utter_aposentadoria_parcela_emprestimo:
+    - text: "Informe o valor total da aposentadoria antes dos descontos do empréstimo consignado."
+
+  utter_rendimento_autonomo:
+    - text: "Informe a média dos rendimentos mensais obtidos com a atividade de vendedor autônomo."
+
+  utter_rendimento_empregado_domestico:
+    - text: "Informe o valor mensal correspondente ao salário mínimo vigente."
+
+  utter_rendimento_varias_fontes:
+    - text: "Some todas as fontes de renda do familiar para informar o rendimento mensal total."
+
+  utter_rendimento_seguro_desemprego:
+    - text: "Informe o valor total do seguro-desemprego recebido mensalmente."
+
+  utter_rendimento_negocio_proprio:
+    - text: "Informe a média dos rendimentos mensais obtidos com o negócio próprio."
+
+  utter_rendimento_aposentadoria_emprestimo:
+    - text: "Informe o valor total da aposentadoria antes dos descontos do empréstimo consignado."
+
+  utter_verificar_data_parentesco:
+    - text: "Verifique a data de nascimento e o grau de parentesco informados para cada membro da família. Certifique-se de seguir o formato correto para a data de nascimento (aaaa-mm-dd) e de selecionar o grau de parentesco correto."
+
+  utter_botao_enviar_desativado:
+    - text: "Verifique se todas as perguntas obrigatórias foram respondidas corretamente e se todos os documentos exigidos foram anexados ao formulário. Se ainda não conseguir enviar, entre em contato com o suporte técnico do processo seletivo para obter assistência."
+    
+  utter_thank_you:
+    - text: "De nada! Se precisar de mais alguma coisa, é só me chamar."
+
+  utter_sorry:
+    - text: "Tudo bem, não se preocupe."
+
+  utter_ask_information:
+    - text: "Como posso ajudar você com essa informação?"
+
+  utter_affirm:
+    - text: "Ótimo!"
+
+  utter_deny:
+    - text: "Ok, entendi."
+
+  utter_positive_feedback:
+    - text: "Fico feliz que tenha sido útil!"
+
+  utter_negative_feedback:
+    - text: "Sinto muito que não tenha sido útil. Posso ajudar com mais alguma coisa?"
+
+  utter_ask_help:
+    - text: "Claro, como posso ajudar você?"
+
+  utter_out_of_scope:
+    - text: "Desculpe, mas não sei a resposta para isso."
+
+  utter_small_talk:
+    - text: "Eu sou um assistente virtual, estou aqui para ajudar você!"
+
+  utter_default:
+    - text: "Desculpe, não entendi. Pode reformular a pergunta?"
+    - text: "Não consegui compreender. Pode tentar de outra forma?"
+    - text: "Desculpe, não consegui entender. Pode repetir de outra maneira?"
+    - text: "Não entendi o que você quis dizer. Pode explicar melhor?"
 
 session_config:
   session_expiration_time: 60
