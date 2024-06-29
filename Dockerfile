@@ -1,17 +1,22 @@
-# Use Rasa base image
-FROM rasa/rasa:3.0.0
+FROM python:3.10-slim
 
-# Use subdirectory as working directory
+# Diretório de trabalho dentro do contêiner
 WORKDIR /app
 
-# Copy everything to /app
-COPY . /app
+# Copiar os arquivos de requisitos para o diretório de trabalho
+COPY requirements.txt .
 
-# Install additional requirements
-RUN pip install -r requirements.txt
+# Instalar dependências do sistema e do Python
+RUN apt-get update && apt-get install -y build-essential \
+    && pip install --upgrade pip \
+    && pip install -r requirements.txt 
 
-# By best practices, don't run as root
-USER 1001
+# Copiar o restante do código da aplicação
+COPY . .
 
-# Run the server(s)
-CMD ["start", "--actions", "actions", "--cors", "*", "--enable-api"]
+# Copiar o script de entrada
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# Comando para rodar a aplicação
+ENTRYPOINT ["/entrypoint.sh"]
