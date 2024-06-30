@@ -32,7 +32,6 @@ share/python-wheels/
 
 # Rasa specific
 .rasa/
-models/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
