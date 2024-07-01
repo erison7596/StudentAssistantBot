@@ -22,7 +22,6 @@ RUN rasa train
 # Expor as portas necessárias
 EXPOSE 5005
 EXPOSE 5055
-EXPOSE 8000
 
 # Comando para rodar a aplicação
-CMD ["python", "run_server.py"]
+CMD ["rasa", "run", "--enable-api", "--cors", "*", "--port", "5005"]
