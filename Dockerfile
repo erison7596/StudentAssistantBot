@@ -1,27 +1,28 @@
-# Use Rasa base image
-FROM rasa/rasa:3.0.0
+# Use Python base image
+FROM python:3.10-slim
 
-# Use subdirectory as working directory
+# Diretório de trabalho dentro do contêiner
 WORKDIR /app
 
-# Copy everything to /app
-COPY . /app
+# Copiar os arquivos de requisitos para o diretório de trabalho
+COPY requirements.txt .
 
-# Update pip and install additional requirements as root
-USER root
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+# Instalar dependências do sistema e do Python
+RUN apt-get update && apt-get install -y build-essential \
+    && pip install --upgrade pip \
+    && pip install -r requirements.txt \
+    && pip install flask-cors  # Instalar o flask-cors
 
-# Train the model
+# Copiar o restante do código da aplicação
+COPY . .
+
+# Treinar o modelo Rasa
 RUN rasa train
 
-# Expose necessary ports
+# Expor as portas necessárias
 EXPOSE 5005
 EXPOSE 5055
 EXPOSE 8000
 
-# By best practices, don't run as root
-USER 1001
-
-# Run the custom Flask server script
-CMD ["python", "run_server.py"]
+# Comando para rodar a aplicação
+ENTRYPOINT ["python", "/run_server.py"]
