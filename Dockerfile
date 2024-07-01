@@ -25,4 +25,4 @@ EXPOSE 5055
 EXPOSE 8000
 
 # Comando para rodar a aplicação
-ENTRYPOINT ["python", "/run_server.py"]
+CMD ["python", "run_server.py"]
