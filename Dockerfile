@@ -16,6 +16,9 @@ RUN apt-get update && apt-get install -y build-essential \
 # Copiar o restante do código da aplicação
 COPY . .
 
+# Treinar o modelo Rasa
+RUN rasa train
+
 # Expor as portas necessárias
 EXPOSE 5005
 
