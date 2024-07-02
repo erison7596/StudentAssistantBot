@@ -1,4 +1,3 @@
-# Use Python base image
 FROM python:3.10-slim
 
 # Diretório de trabalho dentro do contêiner
@@ -9,18 +8,18 @@ COPY requirements.txt .
 
 # Instalar dependências do sistema e do Python
 RUN apt-get update && apt-get install -y build-essential \
+    && rm -rf /var/lib/apt/lists/* \
     && pip install --upgrade pip \
-    && pip install -r requirements.txt \
-    && pip install flask-cors  # Instalar o flask-cors
+    && pip install -r requirements.txt
 
-# Copiar o restante do código da aplicação
+# Copiar todo o projeto para o diretório de trabalho
 COPY . .
 
-# Treinar o modelo Rasa
-RUN rasa train
+# By best practices, don't run as root
+USER 1001
 
-# Expor as portas necessárias
+# Expor a porta 5005
 EXPOSE 5005
 
-# Comando para rodar a aplicação
-CMD ["rasa", "run", "--enable-api", "--cors", "*", "--port", "5005"]
+# Run the server
+CMD ["rasa", "run", "--enable-api", "--cors", "*"]
