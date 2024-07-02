@@ -30,9 +30,6 @@ share/python-wheels/
 .installed.cfg
 *.egg
 
-# Rasa specific
-.rasa/
-.models
 # Jupyter Notebook
 .ipynb_checkpoints/
 

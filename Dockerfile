@@ -16,12 +16,8 @@ RUN apt-get update && apt-get install -y build-essential \
 # Copiar o restante do código da aplicação
 COPY . .
 
-# Treinar o modelo Rasa
-RUN rasa train
-
 # Expor as portas necessárias
 EXPOSE 5005
-EXPOSE 5055
 
 # Comando para rodar a aplicação
 CMD ["rasa", "run", "--enable-api", "--cors", "*", "--port", "5005"]
