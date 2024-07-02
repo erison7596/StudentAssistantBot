@@ -15,12 +15,6 @@ RUN apt-get update && apt-get install -y build-essential \
 # Copiar todo o projeto para o diretório de trabalho
 COPY . .
 
-# Configurar permissões corretas antes de alternar para o usuário não root
-RUN chown -R 1001:1001 /app
-
-# Alternar para um usuário não root
-USER 1001
-
 # Expor a porta 5005
 EXPOSE 5005
 
